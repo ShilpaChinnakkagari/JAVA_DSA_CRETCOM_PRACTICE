@@ -33,37 +33,37 @@
 // A. Basic Array Operations
 // ===============================
 
-// 1. Create an integer array of size 5. Insert 5 elements and print it.
-// 2. Traverse the array using a standard for loop.
-// 3. Traverse the array using enhanced for loop.
-// 4. Find the maximum element in the array.
-// 5. Find the minimum element in the array.
-// 6. Find the second largest element.
-// 7. Find the sum of all elements.
-// 8. Find the average of elements.
-// 9. Count even and odd numbers in the array.
-// 10. Search for a given element using linear search.
+// 1. Create an integer array of size 5. Insert 5 elements and print it. //ArraYs_Traversal
+// 2. Traverse the array using a standard for loop. //ArraYs_Traversal
+// 3. Traverse the array using enhanced for loop. //ArraYs_Traversal
+// 4. Find the maximum element in the array. //ArraYs_MaxMin
+// 5. Find the minimum element in the array.  ArraYs_MaxMin
+// 6. Find the second largest element. //46Q Refer
+// 7. Find the sum of all elements. // ArraYs_SumAvg
+// 8. Find the average of elements. //ArraYs_SumAvg
+// 9. Count even and odd numbers in the array.//ArraYs_CountEvenOdd
+// 10. Search for a given element using linear search. //ArraYs_LinearSearch
 
 // ===============================
 // B. Insertion & Deletion (Manual)
 // ===============================
 
-// 11. Insert an element at a given index (shift elements to the right).
-// 12. Delete an element at a given index (shift elements to the left).
-// 13. Resize an array manually to a bigger size.
-// 14. Merge two arrays into a third array.
-// 15. Copy elements from one array to another.
+// 11. Insert an element at a given index (shift elements to the right). //ArraYs_InsertPos
+// 12. Delete an element at a given index (shift elements to the left). //ArraYs_DeletePos
+// 13. Resize an array manually to a bigger size. //ArraYs_Resize
+// 14. Merge two arrays into a third array. //ArraYs_Merge2Arys
+// 15. Copy elements from one array to another.//ArraYs_CopyElementsA2A
 
 // ===============================
 // C. Reversal & Rotation
 // ===============================
 
 // 16. Reverse an array using an extra array.
-// 17. Reverse an array using two-pointer technique (in-place).
-// 18. Rotate array left by 1 position.
-// 19. Rotate array right by 1 position.
-// 20. Rotate array left by k positions.
-// 21. Rotate array right by k positions.
+// 17. Reverse an array using two-pointer technique (in-place). //ArraYs_ReverseTwoPointer
+// 18. Rotate array left by 1 position. //ArraYs_Rotate1PosLft
+// 19. Rotate array right by 1 position. // ArraYs_Rotate1PosRght
+// 20. Rotate array left by k positions. //ArraYs_RotatekPosLft
+// 21. Rotate array right by k positions. //ArraYs_RotatekPosRght
 // 22. Rotate array by k positions in-place (O(1) space).
 
 // ===============================
@@ -80,9 +80,9 @@
 // E. Frequency & Duplicates
 // ===============================
 
-// 28. Count frequency of each element.
-// 29. Find duplicate elements in the array.
-// 30. Remove duplicates from sorted array (in-place).
+// 28. Count frequency of each element. //ArraYs_CountFreq
+// 29. Find duplicate elements in the array. //ArraYs_Duplicates
+// 30. Remove duplicates from sorted array (in-place).//ArraYs_RemoveDuplicates
 // 31. Find the first repeating element.
 // 32. Find the first non-repeating element.
 
