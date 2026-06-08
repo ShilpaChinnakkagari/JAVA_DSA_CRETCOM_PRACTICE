@@ -1,0 +1,114 @@
+I. DEFINITION :
+------------
+a). Computer :
+    Computer is an electronic device of data processing which takes input from the user
+    and generates desired output after processing.
+
+b). Basic Components of Computer :
+    CPU, Monitor (op device), Keyboard & Mouse (ip device)
+
+c). Generations of computer :
+    1st, 2nd, 3rd, 4th, 5th
+
+d). program :
+    A program is set of instructions that perform specific tasks.
+
+e). algorithm :
+    a set of sequential instructions or linear steps to perform specific task.
+    (In Algorithm, we use human understandable language(English), instruction should be more generalised
+      without ambiguity)
+
+f). compiler :
+    converts a program written in high-level language into machine kanguage, entire program at once.
+
+g). interpreter :
+    converts a high-level language into a machine language, one line at a time.
+
+II. PROGRAMMING
+===============
+==> Programming is the process of designing, writing, testing, and
+    maintaining instructions that tell a computer what to do.
+==> Why it Exists
+    Computers can only perform tasks when given precise instructions.
+    Programming allows humans to communicate those instructions to computers.
+
+==> How it Works
+    1. Programmer writes code.
+    2. Code is converted into machine-understandable form (compiled or interpreted).
+    3. Computer executes the instructions.
+    4. Desired output is produced.
+
+==> What Problem It Solves
+    1. Automates repetitive tasks.
+    2. Processes large amounts of data.
+    3. Builds software, websites, mobile apps, and games.
+    4. Controls hardware and devices.
+
+==> Uses
+    Web Development
+    Mobile Applications
+    Artificial Intelligence
+    Data Science
+    Cybersecurity
+    Automation
+    Embedded Systems
+
+II. PROGRAMMING LANGUAGE // notes
+========================
+==> A programming language is a formal language used to write instructions (programs)
+    that a computer can understand and execute.
+==> It uses special words and rules to create programs that tell the computer what to do.
+
+==> Why it Exists
+    Writing directly in machine code (0s and 1s) is difficult.
+    Programming languages provide an easier way for humans to communicate with computers.
+
+==> How it Works
+    1. Programmer writes code using a programming language.
+    2. Compiler or Interpreter translates the code.
+    3. CPU executes the translated instructions.
+
+==> What Problem It Solves
+    1. Makes coding easier and faster.
+    2. Improves readability.
+    3. Reduces errors.
+    4. Enables development of complex applications.
+
+II (a). TYPES OF PROGRAMMING LANGUAGES //notes
+======================================
+==> A high-level language (HLL) is a human-readable programming language that simplifies
+    coding by hiding complex hardware details, letting developers focus on logic and functionality.
+
+    1.Designed to make writing code simpler and faster.
+    2.Allow developers to build large programs more easily.
+    3.Easier to find and fix mistakes.
+    4.Can work on different computers with minimal adjustments.
+    5.Usually slower in performance compared to machine-oriented languages.
+    6.Provide many ready-made features to speed up coding.
+    7.Good for beginners and widely used for everyday software.
+    8.Examples include JavaScript, Ruby, Swift, and PHP.
+
+    Example : Java, Python, JS, Ruby, C, C#
+
+==> A low-level language is a machine-oriented programming language that provides
+    minimal abstraction from hardware, offering direct control over memory and
+    system resources for maximum performance and efficiency.
+
+    1.Provide direct access to the computer’s hardware.
+    2.Require detailed knowledge of how a computer works.
+    3.Less user-friendly, making programming more challenging.
+    4.Harder to find and solve errors in code.
+    5.Not easily adapted for use on different hardware.
+    6.Used mostly for specific tasks needing high performance or precise control.
+    7.Often faster and use fewer system resources.
+    8.Examples include Binary code and Assembly languages like MIPS or ARM.
+
+    Example : Assembly Language, Machine Language
+
+==> Assembly Language is a low-level programming language that uses
+    mnemonic instructions to communicate directly with the CPU.
+
+    Why Assembly Language Exists
+    1.Computers understand only machine language (binary).
+    2.Writing binary instructions is difficult for humans.
+    3.Assembly provides readable instructions that are converted into machine code by an assembler.
