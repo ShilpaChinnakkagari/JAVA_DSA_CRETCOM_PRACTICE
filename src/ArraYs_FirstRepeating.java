@@ -1,17 +1,21 @@
-import java.util.*;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class ArraYs_FirstRepeating {
-    static int firstrepeat(int[] arr){
-        HashSet<Integer> set = new HashSet<>();
 
-        for(int i = 0; i < arr.length; i++){
-            if(set.contains(arr[i])){
-                return arr[i]; // first repeating
+    static int firstRepeating(int[] arr) {
+        HashSet<Integer> set = new HashSet<>();
+        int answer = -1;
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (set.contains(arr[i])) {
+                answer = arr[i];
+            } else {
+                set.add(arr[i]);
             }
-            set.add(arr[i]);
         }
 
-        return -1;
+        return answer;
     }
 
     public static void main(String[] args) {
@@ -23,10 +27,10 @@ public class ArraYs_FirstRepeating {
         int[] arr = new int[n];
 
         System.out.print("Enter array elements: ");
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             arr[i] = obj.nextInt();
         }
 
-        System.out.println("First Repeating Element: " + firstrepeat(arr));
+        System.out.println("First Repeating Element: " + firstRepeating(arr));
     }
 }

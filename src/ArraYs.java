@@ -64,7 +64,7 @@
 // 19. Rotate array right by 1 position. // ArraYs_Rotate1PosRght
 // 20. Rotate array left by k positions. //ArraYs_RotatekPosLft
 // 21. Rotate array right by k positions. //ArraYs_RotatekPosRght
-// 22. Rotate array by k positions in-place (O(1) space).
+// 22. Rotate array by k positions in-place (O(1) space). //right/left
 
 // ===============================
 // D. Binary Search Variations

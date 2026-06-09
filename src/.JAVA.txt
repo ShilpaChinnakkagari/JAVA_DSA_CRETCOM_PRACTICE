@@ -1,0 +1,596 @@
+I. WHAT IS JAVA?
+====================
+Java is a widely used, high-level, object-oriented programming language and computing platform.
+--> Renowned for its "write once, run anywhere" (WORA) philosophy, compiled Java code can run on any device
+    with a Java Virtual Machine (JVM) without needing to be recompiled.
+--> Every OS has its own JVM to execute the code
+
+------------------------------------------------------------------------------------------------------------------------
+
+II. HISTORY OF JAVA
+=======================
+    1. Java is a platform-independent programming language.
+    2. Developed in 1991 by James Gosling and his team members at Sun Microsystems.
+    3. Team members:
+        James Gosling
+        Mike Sheridan
+        Patrick Naughton
+    4. They initiated the Java language project in June 1991.
+    5. The small team of Sun engineers was called the Green Team.
+
+* Initially it is called as, OAK
+---------------------------------
+    1. Java was initially named Oak. Oak is a symbol of strength and is the national tree of many countries such as:
+            USA
+            France
+            Germany
+            Romania
+
+* Rename to JAVA
+-----------------
+    => In 1995, Oak was renamed to Java.
+    => The name Java was derived from Java Coffee.
+    => Java is an island in Indonesia, famous for coffee production.
+
+* Oracle Acquisition
+---------------------
+  Sun Microsystems was acquired by Oracle Corporation in 2010.
+
+* JDK Release
+--------------
+  JDK 1.0 (Java Development Kit) was released on January 23, 1996.
+
+| S.No | Version          | Release Date                              |
+| ---- | ---------------- | ----------------------------------------- |
+| 1    | JDK Alpha & Beta | 1995                                      |
+| 2    | JDK 1.0          | 23-Jan-1996                               |
+| 3    | JDK 1.1          | 19-Feb-1997                               |
+| 4    | JDK 1.2          | 08-Dec-1998                               |
+| 5    | JDK 1.3          | 08-May-2000                               |
+| 6    | J2SE 1.4         | 06-Feb-2002                               |
+| 7    | J2SE 5.0         | 30-Sep-2004                               |
+| 8    | Java SE 6        | 11-Dec-2006                               |
+| 9    | Java SE 7        | 28-Jul-2011                               |
+| 10   | Java SE 8        | 18-Mar-2014                               |
+| 11   | Java SE 9        | Sep-2017                                  |
+| 12   | Java SE 10       | Mar-2018                                  |
+| 13   | Java SE 11       | Sep-2018                                  |
+| 14   | Java SE 12       | Mar-2019                                  |
+| 15   | Java SE 13       | Sep-2019                                  |
+| 16   | Java SE 14       | Mar-2020                                  |
+| 17   | Java SE 15       | Sep-2020                                  |
+| 18   | Java SE 16       | Mar-2021 *(Stable Version)*               |
+| 19   | Java SE 17       | Sep-2021                                  |
+| 20   | Java SE 18       | Mar-2022                                  |
+| 21   | Java SE 19       | Sep-2022                                  |
+| 22   | Java SE 20       | Mar-2023                                  |
+| 23   | Java SE 21       | Sep-2023 *(Current Version as per notes)* |
+| 24   | Java SE 22       | 2024                                      |
+| 25   | Java SE 23       | 2024                                      |
+| 26   | Java SE 24       | 2025                                      |
+| 27   | Java SE 25       | Sep-2025                                  |
+
+------------------------------------------------------------------------------------------------------------------------
+
+III. Why Java came despite of C, C# ?
+======================================
+C is not object oriented, it directly deals with the memory address in the system which is dangerous to be hacked,
+as a part C#, does not support garbage collector for better memory management in an efficient way.
+
+Problem in C/C++	          Java Solution
+------------------          -------------------
+Platform dependent	        Platform independent ("Write Once, Run Anywhere")
+Complex syntax	            Simpler syntax
+Manual memory management    Automatic Garbage Collection
+(malloc, free)
+No built-in security	    Strong security features
+Pointer misuse can          No explicit pointers
+cause crashes
+Multiple inheritance        Interfaces provide safer alternative
+complexity in C++
+Difficult for Internet      Designed for network and web applications
+applications
+Less robust	                Strong exception handling
+
+------------------------------------------------------------------------------------------------------------------------
+
+IV. JAVA APPLICATIONS
+=========================
+Types of Java Applications
+        Standalone Application
+        Web Application
+        Enterprise Application
+        Mobile Application
+
+==> 1. Standalone Desktop Application
+    A standalone application is a desktop application or window-based application that must be installed on every machine.
+
+    Examples : Media Player, Antivirus Software, Notepad, Calculator
+
+    Technologies Used
+        AWT (Abstract Window Toolkit)
+        Swing
+
+==> 2. Web Application:
+    A Web Application is an application that runs on the server side and creates dynamic web pages.
+
+    Technologies Used in Java Web Applications
+            Servlets
+            JSP (Java Server Pages)
+            Struts
+            JSF (Java Server Faces)
+
+==> 3. Enterprise Application
+    An enterprise application is a large-scale software application designed to support and automate the business
+    processes of an organization. It is used by multiple users across departments and helps manage operations, data,
+    and resources efficiently.
+
+    Advantages :
+    High-level security, Load balancing, Clustering
+
+    Technology Used
+    EJB (Enterprise Java Beans)
+
+==> 4. Mobile Application
+    A Mobile Application is an application developed for mobile devices.
+
+    Technologies Used
+    Android
+    Java ME (Micro Edition)
+
+------------------------------------------------------------------------------------------------------------------------
+
+V. PROGRAMMING PARADIGMS :
+=========================
+* Need for Object-Oriented Programming Paradigm :
+
+    A computer program consists of:
+        Code + Data
+* A program can be conceptually organized:
+    Around its code
+    Around its data
+  (The program is organized based on functions/procedures (code) rather than data.) //measning
+
+* Two Programming Paradigms
+ -----------------------------
+        Procedure-Oriented Programming Model (POP)
+        Object-Oriented Programming Model (OOP)
+
+
+1. Procedure-Oriented Programming Model (POP)
+===============================================
+
+    Procedure-Oriented Programming (POP) is a programming approach in which the program is organized around functions
+    or procedures. The focus is on performing operations through functions rather than on the data.
+
+    Importance ==> In the POP model, greater importance is given to:
+                    Functions (Procedures)
+                    Sequence of actions to be performed
+    Data receives less importance.
+
+    * Examples of POP Languages
+    C, Pascal, Fortran
+
+    * Characteristics of POP
+    1. A programmer uses procedures/functions to perform tasks.
+    2. A large program is divided into smaller tasks called functions.
+    3. Each function performs a specific sub-task.
+    4. In C programming, all functions are controlled from the main() function.
+
+    * Structure :
+                    main()
+                   /   |   \
+               func1 func2 func3
+    * Drawbacks :
+        1.As program size increases, complexity increases.
+        2.Readability and maintenance become difficult.
+        3.No data hiding concept.
+        4.Data security is less.
+        5.Functions and data are treated separately.
+
+                    Program
+                       ↓
+                    Functions
+                       ↓
+                    Data
+
+2. Object-Oriented Programming (OOP)
+===============================================
+    Object-Oriented Programming (OOP) is a programming paradigm in which a program is organized around objects rather
+    than functions. Objects contain both data (attributes) and methods (functions) that operate on that data
+                    Object
+                     ├── Data (Attributes)
+                     └── Methods (Functions)
+
+    Importance ==> In the OOP model, greater importance is given to:
+                Data (Objects)
+                Functions associated with that data
+
+    * Key Idea
+    OOP works as a real-world model, where data and the functions that operate on that data are combined into a
+    single unit called an object.
+
+    * Advantages of OOP
+            Data hiding (Encapsulation)
+            Better security
+            Reusability of code
+            Easy maintenance
+            Reduced complexity for large applications
+            Better real-world modeling
+            Improved readability and scalability
+
+    * Examples of OOP Languages
+            Java, C++, C#, Python
+
+            Class with main()
+
+                  |
+             ------------------
+             |       |       |
+            Cls1    Cls2    Cls3
+             |       |       |
+            Data    Data    Data
+            Methods Methods Methods
+
+
+DIFF BT. POP and OOP
+-------------------------------------------------------------------------
+| POP                            | OOP                                  |
+| ------------------------------ | ------------------------------------ |
+| Procedure-Oriented Programming | Object-Oriented Programming          |
+| Importance to functions        | Importance to data and objects       |
+| Less security                  | More security                        |
+| No data hiding                 | Supports data hiding                 |
+| Program divided into functions | Program divided into objects/classes |
+| Suitable for small programs    | Suitable for large programs          |
+-------------------------------------------------------------------------
+
+WHEN TO USE WHAT ?
+------------------
+
+POP is suitable for small programs where the focus is on functions and procedures. OOP is suitable for large and
+complex applications where data security, reusability, and maintainability are important
+
+------------------------------------------------------------------------------------------------------------------------
+
+VI. JAVA INTERNAL WORKING
+===============================
+==> JDK
+    JDK (Java Development Kit) is a complete package required to develop, compile, and run Java applications.
+    It includes the JRE, JVM, and development tools like the Java compiler (javac), debugger, and other utilities.
+    JDK = JRE + JVM + development tools (compiler, debugger, etc.)
+
+    ==================
+    |       |       |
+    | JRE   |  JVM  |
+    |       |       |
+    These are the software components used to develop a single java program
+
+    Javac
+    -----
+        - Java Compiler
+        - Compiler is a special software, which used to check the syntactical correctness of a java program.
+
+            COMPILATION :
+            -------------
+
+            Apple.java ========>  (Compiled) ? -----> Byte Code (.class) / intermediacte lang
+                                             |
+                                             Error
+        - Firstly, checks the errors and generate byte code(.class) file, if syntac of java program is correct.
+            Command for compilation : javac FileName.java ====> we get .class file
+            To run .class file  :   java FileName (to run the prgm).
+    ByteCode
+    -------
+        Its a compiler generated intermediate code
+        - byte code neither a high level lang or low level lang but it is an intermediate lang.
+        - extension : .class
+        - only a JRE can interpret code, byte code is common for all the different platforms, that is why,
+            byte code(java) is platform independent.
+
+
+==> JRE :
+        JRE (Java Runtime Environment) is the environment required to run Java applications.
+        It consists of the JVM and core Java libraries but does not include development tools like the compiler.
+        JRE = JVM + Java libraries needed to run a Java program.
+
+        (Libraries provide predefined classes and methods.) + (Supporting files help JVM operate correctly at runtime.)
+
+
+     🔥 JRE Components
+     1️⃣ JVM
+             Executes bytecode
+            Manages memory, threads, GC
+
+     👉 Interview line:
+     JVM is the core of JRE responsible for execution.
+
+     2️⃣ Core Java Libraries
+     java.lang
+     java.util
+     java.io
+     java.net
+     java.sql
+
+     👉 Interview line:
+     Libraries provide predefined classes and methods.
+
+     3️⃣ Supporting Files
+     Configuration files
+     Property files
+     Resource files
+
+     👉 Interview line:
+     Supporting files help JVM operate correctly at runtime.
+
+
+==> JVM :
+    Defn. : an abstract Machine (act as a runtime engine) that executes the Java Byte code (.class file) and assures platform independent (avble for many  h/w. & s/w. pltforms) to run Java pgms.
+    Why is the JVM platform independent?
+    Bcz., each operating system has its own JVM that converts this bytecode into machine-specific instructions.
+
+    “WRITE ONCE - RUN ANYWHERE”
+
+    Operations of JVM
+    It takes the compiled .class file (bytecode), loads it into JVM memory, verifies bytecode for security, and executes it using an interpreter or JIT compiler.
+    JVM also handles memory management, garbage collection, thread management, and exception handling.
+    Because each OS has its own JVM implementation, Java follows the principle “Write Once, Run Anywhere.”
+    Tool Kit :  used for developing Java applc. + contains JRE to run / execute Java applications.
+
+    JVM -- Java Virtual Machine
+
+    Specification for JRE :
+        JRE is a physical implementation of JVM.
+        JRE caanot understand .java rather it understand only byte code.
+    We jave JIT in JVM.
+
+    JVM Major Components
+            Class Loader
+            Runtime Data Areas
+            Execution Engine
+            Garbage Collector
+            JNI (Java Native Interface)
+
+
+    1️⃣ Class Loader
+
+    What it does:
+     Loads .class files into JVM memory.
+
+    Types:
+    Bootstrap Class Loader → Loads core classes (java.lang)
+    Extension Class Loader → Loads extension classes
+    Application Class Loader → Loads application classes
+
+
+    2️⃣ Runtime Data Areas (JVM Memory)
+
+    🔹 Heap
+    Stores objects and instance variables
+    Shared among all threads
+    Managed by Garbage Collector
+
+    🔹 Stack
+    Stores method calls, local variables
+                    One stack per thread
+                    Faster than heap
+            | ----------------- | ------------------------------------------ | --------------------------------------- |
+            | Feature           | Heap Memory                                | Stack Memory                            |
+            | ----------------- | ------------------------------------------ | --------------------------------------- |
+            | Stores            | Objects and instance data                  | Method calls, local variables           |
+            | Access            | Shared across threads                      | One stack per thread                    |
+            | Speed             | Slower                                     | Faster                                  |
+            | Memory Management | Managed by Garbage Collector (GC)          | Automatically managed                   |
+            | Allocation        | Dynamic memory allocation                  | Static memory allocation                |
+            | Lifetime          | Exists until objects are garbage collected | Exists until method execution completes |
+            | Size              | Generally larger                           | Generally smaller                       |
+            | Purpose           | Stores objects created during runtime      | Stores execution context of methods     |
+            | ----------------- | ------------------------------------------ | --------------------------------------- |
+
+
+    👉 Interview line:
+    Stack memory follows LIFO and is automatically cleared after method execution.
+
+    🔹 Method Area
+            Stores class metadata
+            Static variables
+            Method code
+
+
+    👉 Interview line:
+    Method Area stores class-level information.
+
+    🔹 PC Register
+        Holds address of current instruction
+        One per thread
+
+    👉 Interview line:
+    PC register tracks the execution of current thread.
+
+    🔹 Native Method Stack
+    Used for non-Java (native) methods
+
+    👉 Interview line:
+    Native Method Stack supports native code execution.
+
+    3️⃣ Execution Engine
+    Purpose: Executes bytecode.
+    Includes:  Interpreter → Executes line by line
+
+    JIT Compiler → Converts bytecode to native code
+
+    👉 Interview line:
+    Execution Engine executes bytecode using interpreter and JIT for performance.
+
+    4️⃣ Garbage Collector
+            Automatically removes unused objects
+            Frees heap memory
+            Improves performance & memory usage
+
+    👉 Interview line:
+    Garbage Collection is the process by which JVM automatically removes unused objects from heap memory to prevent memory leaks.
+    If they push:
+    Objects become eligible when no reference exists
+    GC runs automatically (you can’t force it)
+
+
+    5️⃣ JNI (Java Native Interface)
+    Allows Java to call C/C++ code or methods
+
+    👉 Interview line:
+    JNI enables interaction between Java and native applications.
+    JIT
+    JIT (Just-In-Time) Compiler is a component of the JVM that converts frequently executed bytecode into native machine code at runtime, so the program runs faster by avoiding repeated interpretation.
+    -> JVM improves performance with JIT.
+
+
+
+
+==> JIT
+    JIT (Just-In-Time) Compiler is a component of the JVM that converts frequently executed bytecode into native machine code at runtime,
+    so the program runs faster by avoiding repeated interpretation.
+    -> JVM improves performance with JIT.
+
+
+    ==============================
+    Java     compiler       Byte      JVM           JRE      JRE            o/p.
+    Code    ===========>    Code    =======>    0/1 ======>  main() ======> Hello
+
+    Source
+    Code
+                              javac                      |--> JRE (Windows)
+    class Main{      ===> ? Compilation ====> Byte       |--> JRE (Linux)
+                               |              Code       |--> JRE (Andriod)
+    }                          |             (Test Class)
+     Test.java                Errors
+
+
+    ==================================
+
+    J       JVM
+
+    R       J     ========> 01023
+            I
+    E       T
+    =================================
+
+            JDK
+            │
+            ├── JRE
+            │   │
+            │   ├── JVM
+            │   │   │
+            │   │   ├── Class Loader
+            │   │   ├── Memory Areas
+            │   │   ├── Bytecode Verifier
+            │   │   └── Execution Engine
+            │   │         │
+            │   │         ├── Interpreter
+            │   │         └── JIT Compiler
+            │   │
+            │   └── Java Class Libraries
+            │
+            └── Development Tools
+                ├── javac
+                ├── java
+                ├── jar
+                └── jdb
+
+------------------------------------------------------------------------------------------------------------------------
+VII. Features Of Java
+==========================
+Simple, Object Oriented, Platform Independent, Secured, Robust, Portable, Dynamic, Interpreted,
+High Performance, Multi-Threaded, Distributed, Architecture neutral
+------------------------------------------------------------------------------------------------------------------------
+
+VIII. WHY JAVA IS PLATFORM - INDEPENDENT ?
+==========================================
+Java is platform independent because the Java compiler converts source code into platform-independent bytecode.
+Each operating system has its own JVM, which converts this bytecode into machine-specific instructions.
+
+Therefore, the same Java program can run on any system that has a compatible JVM.
+This is known as 'Write Once, Run Anywhere' (WORA).
+
+------------------------------------------------------------------------------------------------------------------------
+IX. INTERVIEW EXPECTED QUESTIONS
+===============================
+JVM
+----
+What is JVM?
+Why is JVM called a virtual machine?
+Why is JVM platform independent?
+Is JVM itself platform independent?
+Difference between JVM, JRE, and JDK.
+Explain JVM architecture.
+What are the components of JVM?
+What are runtime data areas?
+Difference between Heap and Stack.
+What is the role of the Method Area?
+What is the role of the PC Register?
+What is the Native Method Stack used for?
+What is the Execution Engine?
+Does JVM interpret or compile bytecode?
+What is JIT and how is it different from an interpreter?
+What is Garbage Collection? How does it work?
+Types of Garbage Collectors.
+What happens if JVM runs out of memory?
+Difference between JIT compiler and traditional compiler.
+Can JVM run non-Java languages?
+What is Class Loader?
+Types of Class Loaders.
+Difference between static and dynamic class loading.
+What is JVM instruction set?
+Difference between StackOverflowError and OutOfMemoryError.
+How JVM manages threads?
+What is JNI and why is it needed?
+
+JRE
+----
+What is JRE?
+What are the components of JRE?
+Difference between JRE and JVM.
+Can JRE compile Java code?
+What libraries are included in JRE?
+What happens if JRE is not installed?
+Difference between JRE and JDK.
+Role of supporting files in JRE.
+Can multiple JRE versions be installed?
+
+JDK
+---
+What is JDK?
+Difference between JDK and JRE.
+Components of JDK.
+Can JDK run a Java program?
+Tools in JDK.
+Difference between javac and java.
+What happens if only JRE is installed and you try to compile code?
+Can multiple JDK versions be installed?
+How to switch JDK versions?
+
+JIT Compiler
+---------------
+What is JIT?
+Is JIT a compiler or interpreter?
+Difference between JIT and Interpreter.
+Advantages of JIT.
+How does JIT improve performance?
+When does JVM use JIT?
+What is HotSpot JVM?
+Difference between Static Compilation and JIT Compilation.
+
+Frequently Asked Trick Questions
+---------------------------------
+JVM is platform independent. True or False?
+JRE can compile Java code. True or False?
+Difference between Heap Memory and Stack Memory.
+Difference between Static and Non-Static Memory in JVM.
+Can JVM execute code without JRE?
+Difference between Java Bytecode and Machine Code.
+What happens if Garbage Collector fails?
+What is "Write Once, Run Anywhere"?
+Difference between JVM Memory and Physical Memory.
+Difference between Method Area and Heap Memory.
+How does JVM verify bytecode?
+Difference between Native Method Stack and JVM Stack.
+Difference between JIT Compiler and AOT Compiler.
