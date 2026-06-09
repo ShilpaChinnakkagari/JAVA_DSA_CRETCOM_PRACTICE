@@ -1,4 +1,4 @@
-I (A). TECHNICAL TERMS TO BE AWARE OF...
+I (A). COMPUTER BASICS
 ========================================
 1. Computer :
     Computer is an electronic device of data processing which takes input from the user
@@ -37,39 +37,33 @@ I (A). TECHNICAL TERMS TO BE AWARE OF...
      It manages hardware resources and provides the environment required for applications to run.
      ( operating system , file manager, app store)
 
-     (iii). utility software -
+     (iii). utility software - (the state of being useful)
+     Utility software is a type of system software that helps maintain, manage, and
+     optimize the performance of a computer. It supports the operating system by performing specific tasks
+     such as disk cleanup, antivirus protection, file management, and system optimization.
+     Examples include Windows Defender, Disk Cleanup, and backup utilities
     
 
 -----------------
-
-b). Basic Components of Computer :
+I. (B)
+a). Basic Components of Computer :
     CPU, Monitor (op device), Keyboard & Mouse (ip device)
 
-c). Generations of computer :
+b). Generations of computer :
     1st, 2nd, 3rd, 4th, 5th
 
-d). program :
-    A program is set of instructions that perform specific tasks.
+------------------------------------------------------------------------------------------------------------------------
+II. PROGRAMMING BASICS
+=======================
 
-e). algorithm :
-    a set of sequential instructions or linear steps to perform specific task.
-    (In Algorithm, we use human understandable language(English), instruction should be more generalised
-      without ambiguity)
+1. Program
+==> A computer program is a set of instructions written by a programmer to
+    perform a specific task and produce a desired result. These instructions are
+    written using a programming language, stored in computer memory, and executed
+    by the computer to generate output
 
-f). compiler :
-    converts a program written in high-level language into machine kanguage, entire program at once.
-
-g). interpreter :
-    converts a high-level language into a machine language, one line at a time.
-
-h). pseudo code :
-
-i). flow chart :
-
-
-II. PROGRAMMING
-===============
-==> Programming is the process of designing, writing, testing, and
+2. Programming
+==> Programming is the process of designing, writing, testing, and //(d,w,m,t)
     maintaining instructions that tell a computer what to do.
 ==> Why it Exists
     Computers can only perform tasks when given precise instructions.
@@ -120,7 +114,9 @@ II. PROGRAMMING LANGUAGE // notes
 II (a). TYPES OF PROGRAMMING LANGUAGES //notes
 ======================================
 ==> A high-level language (HLL) is a human-readable programming language that simplifies
-    coding by hiding complex hardware details, letting developers focus on logic and functionality.
+    coding by hiding complex hardware details, enables to interact with the computer by
+    giving set of instructions(telling what to do)
+    letting developers focus on logic and functionality.
 
     1.Designed to make writing code simpler and faster.
     2.Allow developers to build large programs more easily.
@@ -155,3 +151,216 @@ II (a). TYPES OF PROGRAMMING LANGUAGES //notes
     1.Computers understand only machine language (binary).
     2.Writing binary instructions is difficult for humans.
     3.Assembly provides readable instructions that are converted into machine code by an assembler.
+
+==> Algorithm - An algorithm is a finite sequence of well-defined instructions used to solve a problem
+    or perform a computation. It provides a step-by-step procedure to achieve a desired result in a finite
+    number of steps.
+
+    * Why do we need algorithms?
+    An algorithm is needed because it provides a precise, **step-by-step procedure** to solve
+    complex computational and mathematical problems efficiently
+    --> To eliminate the ambiguity.
+    They are widely used in computer science, mathematics, engineering, finance, and data analysis.
+
+==> Pseudo Code - Pseudocode is a step-by-step description of an algorithm written in simple English using
+    a code-like structure. It is designed for human understanding and does not follow the syntax of any specific
+    programming language
+
+    * Why do we need pseudo code?
+    it helps us design the logic of a computer program using simple, everyday words before writing actual code.
+    Pseudocode helps programmers plan the solution before writing actual code, makes the logic easy to understand,
+    bridges the gap between algorithm design and coding, and reduces logical errors before implementation.
+
+==> Flow Chart - A flowchart is a graphical representation of an algorithm or process. It uses standard symbols
+    such as rectangles, diamonds, arrows, and ovals to **show the sequence of steps of their excecution internally **
+    and the flow of control in a process **helps to track the code significantly**
+
+    * Why do we need Flow Chart?
+    to track process of code execution sequentially (step by step)
+
+------------------------------------------------------------------------------------------------------------------------
+III. LANGUAGE TRANSLATION
+===========================
+==> Machine Language - Machine code is the lowest-level programming language consisting of binary digits (0s and 1s) that
+    the CPU can directly understand and execute. It contains instructions that tell the computer exactly what operations
+    to perform.
+
+    * Why is Machine Code Important?
+      Machine code is important because it is the native language of the computer.
+      All programs, regardless of the programming language used, are eventually translated into machine code
+      before execution.
+
+    * Opcode and operand -
+        Opcode: The part of an instruction that specifies the operation to be performed (such as ADD or SUBTRACT).
+        Operand: The data or memory location on which the operation is performed.
+
+==> High level language, low level language, assembly language
+
+    any relationship between machine language and low level language? both are same? (No).
+    Yes. Machine language is actually a type of low-level language.
+
+                                    High-Level Language
+                                           ↓
+                                    Assembly Language
+                                           ↓
+                                    Machine Language
+                                           ↓
+                                    CPU Executes
+
+    Programming Languages
+    │
+    ├── Low-Level Languages
+    │   ├── Machine Language
+    │   └── Assembly Language
+    │
+    └── High-Level Languages
+        ├── C
+        ├── C++
+        ├── Java
+        └── Python
+
+        Machine Language = 0s and 1s (includes machine native code in java, after JIT executes from byte code)
+        Assembly Language = MOV, ADD, SUB
+
+==>  Compiler - A Compiler is a software that typically takes a high level language (Like C++ and Java) code as input
+    and converts the input to a lower level language at once. It lists all the errors if the input code does not
+    follow the rules of its language.
+
+    * This process is much faster than interpreter but it becomes difficult to debug all the errors together in a program.
+    * A compiler is a translating program that translates the instructions of high level language to machine level language.
+      A program which is input to the compiler is called a Source program. This program is now converted to a machine
+      level language by a compiler is known as the Object code.
+
+      (input)
+        |           cvts.
+      Source Pgm  ==========> compiles?      ===========>      object code
+      (Java, C)                   |           flw rules?      (low level lang)
+                               Error
+    * Why do we actually need compilers?
+      The computer cannot understand/process the high level code to execute, thus we need an intermediatory software
+      to translate high to low code that machine can actually get it.
+
+==> Interpreter - An interpreter is a software program that translates a high-level language program into machine
+    language line by line and executes each statement immediately. If an error is found, it stops execution and reports
+    the error before moving to the next statement
+
+    (input)        interprets L by L
+       |          execute each stmt.
+    Source Code =========================> output (wt executed)
+    (Python)            |
+                      Error ---> stop execution, report the bug instantly
+
+
+
+                      Source Code (Python)
+                              |
+                              v
+                         Interpreter
+                      (Line-by-line translation
+                         and execution)
+                              |
+                         Error found?
+                            /   \
+                          Yes    No
+                          |       |
+                      Stop and   Continue
+                      show error execution
+                              |
+                            Output
+
+==> assembler - An assembler is a system software that translates an assembly language program into a machine language
+                program. It converts assembly language instructions (mnemonics) into machine code that can be executed
+                by the computer.
+
+                Assembly Language
+                       |
+                   Assembler
+                       |
+                Machine Language
+
+==> linker - A linker is a system software that combines one or more object files and required libraries into a single
+    executable file. It resolves references between different program modules and prepares the program for execution.
+
+                  Source Code
+                       ↓
+                   Compiler
+                       ↓
+                   Object Code
+                       ↓
+                    Linker
+                       ↓
+                  Executable File
+                       ↓
+                    Loader
+                       ↓
+                  Execution
+
+    * Types of Linking
+
+     Static Linking - Static linking combines all required libraries with the program before execution
+     and creates a standalone executable file.
+       (Before execution)
+     [(all req lib.) + prgm. ] ---> standalone file
+
+     Dynamic Linking - Dynamic linking links libraries at runtime when the program is executed.
+       (Executing)
+       Program ---> requires Scanner cls, go to the library and import that cls.
+
+==> Loader - A loader is a system program that loads an executable program into main memory for execution.
+             It allocates memory, loads the program into memory, and prepares it for execution by the CPU.
+
+    * Types of Loader
+    Absolute Loader - An absolute loader loads a program into a fixed memory location specified in the object code
+
+    Relocating Loader - A relocating loader can load a program into any memory location and adjusts memory references
+     accordingly.
+
+                        Source Code
+                             ↓
+                         Compiler
+                             ↓
+                         Object Code
+                             ↓
+                          Linker
+                             ↓
+                        Executable File
+                             ↓
+                          Loader
+                             ↓
+                         Main Memory
+                             ↓
+                         Execution
+------------------------------------------------------------------------------------------------------------------------
+IV. OPERATING SYSTEMS
+=======================
+
+------------------------------------------------------------------------------------------------------------------------
+
+V. PROGRAMMING ERRORS
+=======================
+
+------------------------------------------------------------------------------------------------------------------------
+
+VI. DEVELOPMENT TOOLS
+=======================
+
+------------------------------------------------------------------------------------------------------------------------
+
+VII. NETWORKING
+====================
+
+------------------------------------------------------------------------------------------------------------------------
+
+VIII. DATABASES
+=================
+
+------------------------------------------------------------------------------------------------------------------------
+
+IX. MEMORY ALLOCATION
+=========================
+BIT, BYTE, KB, MG, GB, TB
+
+------------------------------------------------------------------------------------------------------------------------
+
+X. ASCII Values
+=================
