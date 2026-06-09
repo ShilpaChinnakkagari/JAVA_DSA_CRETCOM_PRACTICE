@@ -1,8 +1,46 @@
-I. DEFINITION :
-------------
-a). Computer :
+I (A). TECHNICAL TERMS TO BE AWARE OF...
+========================================
+1. Computer :
     Computer is an electronic device of data processing which takes input from the user
     and generates desired output after processing.
+
+2. Computer Hardware :
+    Computer hardware is the collection of all physical and tangible (perception by touch) parts of a computer
+    system, such as the CPU, RAM, keyboard, mouse, monitor, and storage devices.
+
+    ==> Computer hardware, commonly includes the physical parts of a computer,
+    such as the central processing unit (CPU), random-access memory (RAM), motherboard, computer data storage,
+    graphics card, sound card, and computer case. It includes external devices such as a monitor, mouse, keyboard,
+    and speakers.
+
+3. (a) Software :
+    Software consists of computer programs that instruct the execution of a computer/ program.
+    --> The process of developing software involves several stages. The stages include software design,
+        programming, testing, release, and maintenance.
+    --> Software quality assurance and security are critical aspects of software development, as bugs and security
+
+            * By contrast, software is a set of written instructions that can be stored and run by hardware.
+            Hardware derived its name from the fact that it is hard or rigid with respect to changes,
+            whereas software is soft because it is easy to change.
+
+            * Hardware is typically directed by the software to execute any command or instruction.
+              A combination of hardware and software forms a usable computing system, although other
+              systems exist with only hardware.
+
+3. (b). Types of Software :
+    (i). application software - Application software is a type of software that enables users to perform specific tasks
+    such as creating documents, browsing the internet, editing images, or managing data typically by
+    borrowing/downloading from different outsources ( app store - apps, google store, Microsoft store).
+
+    (ii). system software - used to run hardware.
+     System software is software that acts as an interface between the computer hardware and application software.
+     It manages hardware resources and provides the environment required for applications to run.
+     ( operating system , file manager, app store)
+
+     (iii). utility software -
+    
+
+-----------------
 
 b). Basic Components of Computer :
     CPU, Monitor (op device), Keyboard & Mouse (ip device)
@@ -23,6 +61,11 @@ f). compiler :
 
 g). interpreter :
     converts a high-level language into a machine language, one line at a time.
+
+h). pseudo code :
+
+i). flow chart :
+
 
 II. PROGRAMMING
 ===============
