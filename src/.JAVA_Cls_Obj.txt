@@ -1,0 +1,108 @@
+I. CLASS
+=========
+A Class is a blueprint (or) template.
+        ==> A module or template that contains data and methods (functions).
+        ==> An object is created from a class
+        ==> No memory for fields until instantiation
+        ==> logical entity
+Example :
+class Student {
+    int id;
+    String name;
+
+    void display() {
+        System.out.println(name);
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
+II. OBJECT
+============
+An Object is an instance of a class.
+        ==> OOP follows the data hiding concept.
+        ==> Data security is increased through encapsulation, inheritance, and polymorphism.
+        ==> Physical entity
+Example : Student s1 = new Student();
+
+------------------------------------------------------------------------------------------------------------------------
+
+III. HOW TO RUN JAVA PROGRAM
+=============================
+Suppose the file name is:
+            Sample.java
+    Step 1: Compile
+            javac Sample.java
+      Output: Sample.class
+             (Bytecode file)
+    Step 2: Execute / Run
+            java Sample
+      Output: Program output displayed
+
+------------------------------------------------------------------------------------------------------------------------
+
+IV. IDE (INTEGRATED DEVELOPMENT ENVIRONMENT)
+============================================
+    An IDE (Integrated Development Environment) is software that combines commonly used developer tools
+    into a compact GUI (graphical user interface) application
+
+    ==> combines essential developer tools—such as a code editor, build tools, a debugger, and a terminal—into
+        a single graphical interface.
+    ==> It streamlines software creation, allowing programmers to write, test, and
+        package code without switching between different programs
+
+    IDE :
+    -----
+    IntelliJ IDEA, Eclipse, NetBeans, and VS Code.
+
+    When to Use What ?
+    -------------------
+    | ---------------------- | ------------------------------------------------------------------------------------------------- |
+    | IDE                    | When to Use                                                                                       |
+    | ---------------------- | ------------------------------------------------------------------------------------------------- |
+    | **IntelliJ IDEA**      | Best for professional Java development, Spring Boot, enterprise applications, and large projects. |
+    | **Eclipse IDE**        | Commonly used in companies, good for Java EE, web applications, and plugin-based development.     |
+    | **NetBeans**           | Good for beginners, academic projects, and learning Java concepts.                                |
+    | **Visual Studio Code** | Good for lightweight coding, multiple languages, quick projects, and web development.             |
+    | ---------------------- | ------------------------------------------------------------------------------------------------- |
+
+------------------------------------------------------------------------------------------------------------------------
+
+V. JAVA INSTALLATION
+======================
+    To install Java, first download the JDK from the official Java website. Run the installer and complete the installation.
+    Then configure the JAVA_HOME and PATH environment variables.
+    Finally, verify the installation using the java -version and javac -version commands.
+
+    Step-by-Step Process (Windows)
+    ---------------------------------
+    1. Download JDK
+        Download the JDK from the official Java website : Oracle Java Downloads or OpenJDK (Adoptium).
+    2. Install JDK
+        Run the installer and follow the setup instructions.
+    3. Set JAVA_HOME
+        Create a system variable:
+        JAVA_HOME = C:\Program Files\Java\jdk-xx
+    4. Update PATH
+        Add:
+        %JAVA_HOME%\bin to the Path environment variable.
+    5. Verify Installation
+        Open Command Prompt and run:
+            java -version
+            javac -version
+            Successful Installation
+            If the Java and Javac versions are displayed, Java is installed correctly
+
+    Any difference between installation process in Windows, macOS
+    ----------------------------------------------------------------------------------------
+    | Step          | Windows               | macOS                                         |
+    | ------------- | --------------------- | --------------------------------------------- |
+    | Download JDK  | ✅                     | ✅                                           |
+    | Install JDK   | `.exe` installer      | `.dmg` installer                              |
+    | Set JAVA_HOME | Environment Variables | Terminal profile (`.zshrc` / `.bash_profile`) |
+    | Update PATH   | System PATH variable  | Shell PATH variable                           |
+    | Verify        | `java -version`       | `java -version`                               |
+    -----------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+

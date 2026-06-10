@@ -1,0 +1,196 @@
+I. ABSTRACTION :
+==================
+    Abstraction in Java is the process of hiding internal implementation details (unnecessary implementation)
+    and showing only essential functionality to the user, It hides the complex details.
+    ==> It focuses on what an object does rather than how it does it.
+    ==> Abstract classes may have methods without implementation and must be implemented by subclasses (by overriding
+     in child classes) .By abstracting functionality, changes in the implementation do not affect the code that depends
+     on the abstraction.
+
+    Example : We are driving the car, we are aware of how to drive the car but not internal working of engine, fuel injection,
+              electronic work internally.
+
+              What you see      → Steering, Brake, Accelerator
+              What is hidden    → Engine, Gearbox, Internal Mechanism
+
+
+II. RULES TO ACHIEVE ABSTRACTION :
+==================================
+1. Abstract class or Interface
+2. IS-A-REALTIONSHIP (Inheritance)
+3. Method Overriding (Run-time polymorphism)
+4. An abstract class can contain 0 or more abstract methods.
+
+//encap --> inhert --> poly --> abstrac
+
+III. Understand what is abstract Mean ?
+==========================================
+Not showing all the details; showing only the important part.
+    --> 'abstract' is a keyword which can be defined with the class and name.
+
+IV. ABSTRACT CLASS
+===================
+    --> abstract class , if a class is declared by 'abstract' keyword and allows both
+        (concrete methods) + ( abstract methods )
+    --> If a class contains at least one abstract method, the class must be declared as abstract.
+
+    Syntax :
+    -----------
+        abstract <className> {
+                // concrete methods
+                // abstract methods
+        }
+
+        * concrete methods : the methods which are provided with the complete functionality of its
+                             implementation.
+
+                             Ex: int add(int a, int b){
+                                        return a + b;
+                                  }
+        * abstract methods : The method which has significant declaration but no implementation.
+                             ==> All abstract methods are declared by using abstract keyword.
+
+                             Syntax : abstract <returnType> <MethodName>(<parameters>);
+
+
+V. NON-ABSTRACT CLASS/ CONCRETE CLASS
+=========================================
+--> no 'abstract' keyword and does not allow any abstract methods.
+
+VI. RULES THAT ABSTRACT CLASS FOLLOWS :
+=========================================
+1. For abstract class, we cannot create object.
+   As a part, we cannot invoke the constructor directly.
+
+   WHY ?
+   ---> We cannot create an object of an abstract class because it may contain abstract methods without implementation,
+        making it an incomplete class. Since objects cannot be created, its constructor cannot be invoked directly.
+        However, the constructor of an abstract class is executed when a subclass object is created.
+
+2. The constructor of an abstract class can be called through a child class, either implicitly or explicitly.
+
+    HOW ?
+    -----> (implicitly)
+    abstract class Vehicle {
+               Vehicle() {
+                   System.out.println("Vehicle Constructor");
+               }
+           }
+
+           class Car extends Vehicle {
+           }
+
+           public class Test {
+               public static void main(String[] args) {
+                   Car c = new Car();
+               }
+           }
+
+           Output : Vehicle Constructor
+
+            Car()
+              ↓
+            super()   ← inserted automatically by Java
+              ↓
+            Vehicle()
+
+
+    -----> (explicitly)
+        * If we want to call abstract parent class constructor in child class, we need to use super keyword within
+            the child class constructor.
+
+    abstract class Vehicle {
+        Vehicle() {
+            System.out.println("Vehicle Constructor");
+        }
+    }
+
+    class Car extends Vehicle {
+        Car() {
+            super();    // explicit u call
+        }
+    }
+     public class Test {
+          public static void main(String[] args) {
+             Car c = new Car();
+          }
+     }
+
+VI. CONDITIONS TO INHERIT ABSTRACT CLASS
+=========================================
+1. Make sure the class is abstract.
+2. override abstract methods in the subclasses.
+3. If the child class does not override all abstract methods, then the child class must also be declared abstract.
+
+
+                    object creation               constructor calling
+concrete class          Yes                             Yes
+
+abstract class          No                              Yes
+                        |                                |
+                   cannot create obj                 using super kw in subclass/ reference
+
+VII. CAN AN ABSTRACT METHOD HAVE?
+------------------------------
+| Feature          | Allowed? |
+| ---------------- | -------- |
+| Constructor      | Yes      |
+| Concrete methods | Yes      |
+| Abstract methods | Yes      |
+| Static methods   | Yes      |
+| Final methods    | Yes      |
+| Object creation  | No       |
+-------------------------------
+
+VIII. INTERFACE :
+=================
+    ==> It is a java type of definition which is declared by 'interface' keyword.
+    ==> act like a logical entity/ blue print to implement the class
+        (An entity that exists as a concept or idea in software, but does not physically exist.)
+    ==> Interface is a medium between two systems where one system act as a client and another system, which is
+        object act as a service.
+    ==> Class has to provide the implementation for abstract methods defined in the interface by being implemented
+        by the interface.
+    ==> To build IS-A-REALTIONSHIP between interface and class, use 'implement' keyword.
+    ==> syntax : interface <interfaceName>{
+                    // abstract methods
+                  }
+
+    Key Rules to Remember
+    ---------------------
+    1. Class cannot implement interface.
+    2. Interface implements the class.
+    3. Any variables in interface defined are automatically : public, static, final (instance variables).
+       why?
+       public - to be accessible anywhere, if not, how can the child class override.
+       static - belong to the class, as we cannot create object with interface.
+       final - cannot be modified, as overriding methods feels ambiguity.
+    4. Interfaces allow only abstract methods, which are public , abstract by default.
+
+
+    IS-A-RELATIONSHIP         Class                 Interface
+    (--------> )
+        Class               extends                 not possible
+       Interface           implements                 extends
+
+
+    Why interface cannot allow object creation?
+    -------------------------------------------
+    An interface cannot be instantiated because it contains abstract behavior and does not provide complete
+    implementation. Since it is an incomplete blueprint, Java does not allow object creation for interfaces
+    ==> As a part it is static.
+
+    Interface
+        | (logical instructions)
+      Class
+        | (Logical entity)
+      Object
+
+---------------------------------------------------------------------------
+| Abstract Class               | Interface                                |
+| ---------------------------- | ---------------------------------------- |
+| Uses `abstract class`        | Uses `interface`                         |
+| Can have constructors        | Cannot have constructors                 |
+| Can have instance variables  | Only constants (`public static final`)   |
+| Supports partial abstraction | Supports full abstraction (conceptually) |
+---------------------------------------------------------------------------
