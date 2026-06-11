@@ -13,6 +13,7 @@ I. ABSTRACTION :
               What you see      → Steering, Brake, Accelerator
               What is hidden    → Engine, Gearbox, Internal Mechanism
 
+------------------------------------------------------------------------------------------------------------------------
 
 II. RULES TO ACHIEVE ABSTRACTION :
 ==================================
@@ -23,10 +24,14 @@ II. RULES TO ACHIEVE ABSTRACTION :
 
 //encap --> inhert --> poly --> abstrac
 
+------------------------------------------------------------------------------------------------------------------------
+
 III. Understand what is abstract Mean ?
 ==========================================
 Not showing all the details; showing only the important part.
     --> 'abstract' is a keyword which can be defined with the class and name.
+
+------------------------------------------------------------------------------------------------------------------------
 
 IV. ABSTRACT CLASS
 ===================
@@ -53,9 +58,13 @@ IV. ABSTRACT CLASS
                              Syntax : abstract <returnType> <MethodName>(<parameters>);
 
 
+------------------------------------------------------------------------------------------------------------------------
+
 V. NON-ABSTRACT CLASS/ CONCRETE CLASS
 =========================================
 --> no 'abstract' keyword and does not allow any abstract methods.
+
+------------------------------------------------------------------------------------------------------------------------
 
 VI. RULES THAT ABSTRACT CLASS FOLLOWS :
 =========================================
@@ -115,6 +124,21 @@ VI. RULES THAT ABSTRACT CLASS FOLLOWS :
              Car c = new Car();
           }
      }
+3. We need to override the abstract method in sub class by declaring it as public.
+   why?
+   ----->
+   because interface methods are implicitly public abstract. While overriding, the access level cannot be reduced,
+    so the implementing method must also be public.
+
+        Interface Method
+               ↓
+        public abstract
+
+        Override
+               ↓
+        must remain public
+
+------------------------------------------------------------------------------------------------------------------------
 
 VI. CONDITIONS TO INHERIT ABSTRACT CLASS
 =========================================
@@ -130,6 +154,8 @@ abstract class          No                              Yes
                         |                                |
                    cannot create obj                 using super kw in subclass/ reference
 
+------------------------------------------------------------------------------------------------------------------------
+
 VII. CAN AN ABSTRACT METHOD HAVE?
 ------------------------------
 | Feature          | Allowed? |
@@ -141,6 +167,8 @@ VII. CAN AN ABSTRACT METHOD HAVE?
 | Final methods    | Yes      |
 | Object creation  | No       |
 -------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
 
 VIII. INTERFACE :
 =================
@@ -160,12 +188,15 @@ VIII. INTERFACE :
     ---------------------
     1. Class cannot implement interface.
     2. Interface implements the class.
-    3. Any variables in interface defined are automatically : public, static, final (instance variables).
+    3. Any variables in interface defined are automatically : public, static, final ( constants).
        why?
        public - to be accessible anywhere, if not, how can the child class override.
        static - belong to the class, as we cannot create object with interface.
-       final - cannot be modified, as overriding methods feels ambiguity.
+       final - value cannot be changed, ensuring constants remain fixed.
     4. Interfaces allow only abstract methods, which are public , abstract by default.
+    5. A class implementing an interface must provide implementation
+       for all abstract methods, otherwise the class must be declared abstract.
+    6. If multiple interfaces contain the same abstract method, only one implementation is required.
 
 
     IS-A-RELATIONSHIP         Class                 Interface
@@ -186,6 +217,104 @@ VIII. INTERFACE :
         | (Logical entity)
       Object
 
+------------------------------------------------------------------------------------------------------------------------
+
+IX. TYPES OF INTERFACES :
+=========================
+1. Marker Interface :
+    --> An interface with out any/no abstract method.
+    --> An empty interface is also called as Marker Interface.
+    --> we have predefined interface in Marker interface named as : Clonable and Seriable interfaces.
+
+2. Functional interface :
+    --> An interface with only one abstract method/ a method.
+    --> we have predefined interface : Runnable and Comparable
+
+*** Why multiple inheritance is possible through interfaces but not through classes?
+    -->Java does not support multiple inheritance through classes to avoid the Diamond Problem and ambiguity.
+    -->Interfaces support multiple inheritance because they provide only method declarations, and the implementing
+        class supplies the actual implementation.
+
+        Classes    → Implementation → Ambiguity
+
+        Interfaces → Declaration   → No Ambiguity
+
+*** What is the Diamond Problem?
+    The Diamond Problem is an ambiguity that occurs in multiple inheritance when a class inherits
+    from two parent classes that both inherit from the same grandparent class.
+
+    ==> The Diamond Problem is a well-known issue in programming languages that support multiple inheritance, where a class
+        inherits the same method from more than one parent class, creating ambiguity about which method should be executed.
+                       A
+                      / \
+                     B   C
+                      \ /
+                       D
+       // class
+       class A {
+           void show() {
+               System.out.println("A");
+           }
+       }
+
+       class B extends A { }
+
+       class C extends A { }
+
+       // Assume Java allowed this
+       class D extends B, C { }
+
+       //interface
+       interface A {
+           void show();
+       }
+
+       interface B {
+           void show();
+       }
+
+       class C implements A, B {
+           public void show() {
+               System.out.println("Hello");
+           }
+       }
+
+    Why Java Avoids the Diamond Problem ?
+    -------------------------------------
+    Java avoids the Diamond Problem because it creates ambiguity when a child class inherits the same
+    method from multiple parent classes. To keep method resolution simple and unambiguous,
+    Java does not support multiple inheritance through classes
+
+    How can we achieve diamond problem via interfaces ?
+    ----------------------------------------------------
+    Java allows a diamond-shaped inheritance structure through interfaces. If multiple interfaces
+    provide the same default method, the implementing class must override the method and explicitly
+    choose the implementation. Therefore, Java avoids the Diamond Problem even with interfaces.
+
+    Classes + Diamond  → Not Allowed ❌
+
+    Interfaces + Diamond → Allowed ✅
+    because Java forces the class
+    to resolve any ambiguity.
+
+    ==> If multiple interfaces contain the same default method, the implementing class must override it
+        to resolve ambiguity
+
+        Ex:
+        interface A {
+            default void sleep() {
+                System.out.println("Sleep");
+            }
+        }
+
+        interface B {
+            default void sleep() {
+                System.out.println("Sleep not");
+            }
+        }
+
+
+X. DIFF. B/W. Abstract and Interface
 ---------------------------------------------------------------------------
 | Abstract Class               | Interface                                |
 | ---------------------------- | ---------------------------------------- |
