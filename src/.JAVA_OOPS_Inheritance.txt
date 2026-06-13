@@ -1,0 +1,143 @@
+I. INHERITANCE / IS-A-RELATIONSHIP :
+===================================
+Creating a new class from existing class such that the features of existing class are available to the new class.
+Existing class - super class / parent class / base class
+New class - sub class/ child class / derived class
+--> Using inheritance, while creating sub classes a programmer can reuse the super class code without rewriting it.
+
+Syntax :
+---------
+create <class1> extends <class2>{}
+--> extends is the key word to extend the classes.
+
+------------------------------------------------------------------------------------------------------------------------
+
+II. TYPES OF INHERITANCE :
+=============================
+1. Single Inheritance :
+-----------------------
+    Single inheritance is a type of inheritance in which one child class inherits from one parent class
+            A
+            ↓
+            B
+
+    Example : class A { }
+              class B extends A { }
+
+2. Multilevel Inheritance :
+---------------------------
+    Multilevel inheritance is a type of inheritance where a class inherits from another derived class, forming a
+    chain. class A --> class B --> class C --> class D --> ...........
+            A
+            ↓
+            B
+            ↓
+            C
+
+     Example:
+            class A { }
+            class B extends A { }
+            class C extends B { }
+
+3. Hierarchical Inheritance
+------------------------------
+    Hierarchical inheritance is a type of inheritance in which multiple child classes inherit from the same
+    parent class.
+                    A
+                   / \
+                  B   C
+
+    Example:
+        class A { }
+        class B extends A { }
+        class C extends A { }
+
+4. Multiple Inheritance
+----------------------------
+    Multiple inheritance is a type of inheritance in which a class inherits from more than one parent class.
+    Java does not support multiple inheritance through classes to avoid the Diamond Problem.
+                A     B
+                 \   /
+                   C
+
+    Example:
+        class C extends A, B   // Not Allowed (Diamond problem) --> refer abstraction concept
+     **** Possible via interfaces.
+
+5. Hybrid Inheritance
+---------------------
+    Hybrid inheritance is a combination of two or more inheritance types. Java does not support hybrid inheritance
+    through classes because it may lead to ambiguity. (diamond problem)
+                                    A (Interface)
+                                   / \
+                                  B   C
+                                   \ /
+                                    D (Class)
+
+    Combination of:
+            Hierarchical + Multiple
+    **** Possible via interfaces.
+
+    Example :
+    interface A {
+        void show();
+    }
+
+    interface B extends A {
+    }
+
+    interface C extends A {
+    }
+
+    class D implements B, C {
+
+        public void show() {
+            System.out.println("Hybrid Inheritance");
+        }
+    }
+
+Which inheritance types are supported in Java?"
+        Single
+        Multilevel
+        Hierarchical
+
+Multiple (through classes) (Not Possible)
+Hybrid (through classes)   (Not Possible)
+
+------------------------------------------------------------------------------------------------------------------------
+
+III. METHOD OVERRIDING IN INHERITANCE
+===============================
+--> one class sharing (properties + behaviour) with another class.
+--> Methods inherited from the parent class can be overridden in the child class to provide a different implementation.
+    Constructors are not inherited and therefore cannot be overridden.
+
+------------------------------------------------------------------------------------------------------------------------
+
+IV. ADVANTAGES OF INHERITANCE
+    ===============================
+    1. Code Reusability
+       --> Child class can reuse parent class code.
+
+    2. Reduces Code Duplication
+       --> No need to rewrite existing functionality.
+
+    3. Method Overriding
+       --> Child class can provide its own implementation.
+
+    4. Easy Maintenance
+       --> Changes in parent class can be reused by child classes.
+
+    5. Supports IS-A Relationship
+       --> Example: Car IS-A Vehicle.
+
+------------------------------------------------------------------------------------------------------------------------
+
+V. Why Java does not support Multiple Inheritance through Classes?
+   =================================================================
+   Java does not support multiple inheritance through classes to avoid the Diamond Problem, where the compiler cannot
+   determine which parent class method should be inherited when both parents contain the same method.
+
+------------------------------------------------------------------------------------------------------------------------
+VI. SUPER Key Word
+======================

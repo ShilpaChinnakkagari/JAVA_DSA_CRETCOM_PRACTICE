@@ -38,6 +38,7 @@ IV. ABSTRACT CLASS
     --> abstract class , if a class is declared by 'abstract' keyword and allows both
         (concrete methods) + ( abstract methods )
     --> If a class contains at least one abstract method, the class must be declared as abstract.
+    --> can have 0 or more abstract methods.
 
     Syntax :
     -----------
@@ -287,15 +288,14 @@ IX. TYPES OF INTERFACES :
 
     How can we achieve diamond problem via interfaces ?
     ----------------------------------------------------
-    Java allows a diamond-shaped inheritance structure through interfaces. If multiple interfaces
-    provide the same default method, the implementing class must override the method and explicitly
-    choose the implementation. Therefore, Java avoids the Diamond Problem even with interfaces.
+    A diamond-shaped inheritance structure can be created using interfaces. If multiple interfaces provide the
+    same default method, ambiguity occurs. Java resolves this by forcing the implementing class to override the
+    method and explicitly choose which implementation to use.
 
     Classes + Diamond  → Not Allowed ❌
 
     Interfaces + Diamond → Allowed ✅
-    because Java forces the class
-    to resolve any ambiguity.
+    because Java forces the class to resolve any ambiguity by overriding in child classes.
 
     ==> If multiple interfaces contain the same default method, the implementing class must override it
         to resolve ambiguity

@@ -1,0 +1,97 @@
+I. ENCAPSULATION :
+===================
+Definition : process of Wrapping up of data(variables) and methods(functions) into a single entity/unit
+called: Encapsulation Class.
+--> By default, Java supports encapsulation -- default (no key word)
+    (Java supports encapsulation through classes, access modifiers,
+    and getter/setter methods.)
+
+Analogy :
+        ----------------------------------------------
+        |       Data member      | Methods           |
+        |                        |                   |
+        ----------------------------------------------
+
+--> It is described as a protective barrier that prevents data from being directly accessed by code outside the class.
+
+------------------------------------------------------------------------------------------------------------------------
+II. ACCESS MODIFIERS IN JAVA
+=============================
+Access modifiers are keywords used to control the visibility and accessibility of classes, methods, variables, and
+constructors. Java provides four access modifiers: private, default, protected, and public
+
+There are 4 access modifiers:
+    ----------------------------------------------------------------------------------------------
+    | Access Modifier | Same Class | Same Package | Subclass (Different Package) | Other Package |
+    | --------------- | ---------- | ------------ | ---------------------------- | ------------- |
+    | **public**      | ✅         | ✅           | ✅                          | ✅            |
+    | **protected**   | ✅         | ✅           | ✅                          | ❌            |
+    | **default**     | ✅         | ✅           | ❌                          | ❌            |
+    | **private**     | ✅         | ❌           | ❌                          | ❌            |
+    ----------------------------------------------------------------------------------------------
+
+    Which access modifier is most restrictive?
+    ✅ private
+
+    Which access modifier is least restrictive?
+    ✅ public
+
+------------------------------------------------------------------------------------------------------------------------
+
+III. How can Java achieve Encapsulation :
+=========================================
+Encapsulation is achieved in Java by hiding data using the private access modifier and providing controlled access
+through public getter and setter methods
+
+1. Declare variables as private.
+2. Provide public getter and setter methods.
+3. Access data only through getters and setters.
+
+        Encapsulation
+              ↓
+        Data Hiding
+              ↓
+        private variables
+              +
+        Getter/Setter methods
+Example :
+---------
+    ATM Machine
+
+    What you see:
+    -------------
+    Withdraw()
+    Deposit()
+
+    What is hidden:
+    ---------------
+    Account Balance
+    PIN Verification
+    Bank Database
+
+------------------------------------------------------------------------------------------------------------------------
+
+IV. Advantages of Encapsulation :
+==================================
+--> we can restrict the accessibility of data members in different classes except by the setter and getter method.
+--> The main Advantages of encapsulation is code readability.
+--> We can perform some validation with the usage of setter method.
+        1. Data Hiding
+        2. Better Security
+        3. Controlled Access through getters/setters
+        4. Easy Validation
+        5. Better Maintainability
+
+------------------------------------------------------------------------------------------------------------------------
+
+V. DIFFERENCE BETWEEN ENCAPSULATION AND ABSTRACTION :
+=====================================================
+---------------------------------------------------------------------------------------------------------
+| Encapsulation                                        | Abstraction                                    |
+| ---------------------------------------------------- | ---------------------------------------------- |
+| Hides data                                           | Hides implementation                           |
+| Achieved using private variables and getters/setters | Achieved using abstract classes and interfaces |
+| Focuses on security                                  | Focuses on simplicity                          |
+---------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------

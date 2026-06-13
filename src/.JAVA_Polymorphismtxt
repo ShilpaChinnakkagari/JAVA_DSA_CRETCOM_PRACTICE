@@ -1,0 +1,97 @@
+I. POLYMORPHISM
+====================
+--> came fromm Geek words -- 'poly' -- Many + 'morphos' -- forms
+--> Polymorphism is the ability of an object or method to take many forms and exhibit different behavior
+    in different situations.
+ (The ability of a method to behave differently for different object ==> polymorphism)
+
+ -----------------------------------------------------------------------------------------------------------------------
+
+ II. TYPES OF POLYMORPHISM
+ =========================
+ 1. Compile Time Polymorphism (Static Polymorphism)
+ ------------------------------------------------------------------------
+Compile-time polymorphism is the ability of a method to perform different tasks based on different parameter lists.
+The method to be executed is decided by the compiler during compilation.
+
+ Method Overloading :
+    In a class, having multiple methods with same name and with different parameters (no changing return type).
+ --> Different parameters (Changing no of parameters)
+ --> Changing Data types of parameters
+ --> Changing order of parameters.
+
+ * CTP achieved by Method Overloading (also known as early/static binding)
+
+    Example :
+    class Calculator {
+
+        int add(int a, int b) {
+            return a + b;
+        }
+
+        int add(int a, int b, int c) {
+            return a + b + c;
+        }
+    }
+
+    add(10, 20);      // calls first method
+    add(10, 20, 30);  // calls second method
+
+ WHY DO WE SAID - COMPILE TIME POLYMORPHISM
+ -------------------------------------------
+because the compiler determines which overloaded method should be executed
+ during compilation itself, before the program runs.
+ (Out of so many methods, which method implementation should be executed is decided by the compiler during the compile time).
+
+ 2. Run Time Polymorphism (Dynamic Polymorphism)
+ --------------------------------------------------------------------------
+ The process of one method behaving differently for the different objects during the run time.
+            Reference Type = Parent
+            Object Type = Child
+
+            Example:
+            Animal a = new Dog();
+
+ Method Overriding :
+    Method overriding is the process of providing a new implementation for an inherited method in the child class.
+    --> same method name, same parameters , same return type.
+    --> IS-A-RELATIONSHIP
+    --> During Method Overriding, we can use optionally annotation "@Override" which determines the method is overridden
+        for a specific method.
+
+  * RTP achieved by Method Overriding (also known as late/dynamic binding)
+
+  Example :
+    class Animal {
+        void sound() {
+            System.out.println("Animal");
+        }
+    }
+
+    class Dog extends Animal {
+        void sound() {
+            System.out.println("Bark");
+        }
+    }
+
+    Animal a = new Dog();
+    a.sound();
+
+WHY DO WE SAID - RUN TIME POLYMORPHISM
+-------------------------------------------------
+JVM decides which overridden method to execute based on the actual object created at runtime
+
+-----------------------------------------------------------------------------------------------------------------------
+
+III. DIFFERENCE BETWEEN METHOD OVERLOADING & OVERRIDING
+==========================================================
+----------------------------------------------------
+| Method Overloading        | Method Overriding     |
+| ------------------------- | --------------------- |
+| Compile-Time Polymorphism | Run-Time Polymorphism |
+| Same class                | Parent & Child class  |
+| Different parameters      | Same parameters       |
+| Inheritance not required  | Inheritance required  |
+| Compiler decides          | JVM decides           |
+-----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------

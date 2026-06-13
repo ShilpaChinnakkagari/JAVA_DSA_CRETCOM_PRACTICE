@@ -18,6 +18,30 @@ II. HISTORY OF JAVA
     4. They initiated the Java language project in June 1991.
     5. The small team of Sun engineers was called the Green Team.
 
+        STORY :
+        ========
+        In 1990, Sun Microsystems Inc. (US) conceived a project to develop software for consumer electronic devices
+            that could be controlled by a remote. This project was called the Stealth Project, but later its name was
+            changed to the Green Project.
+
+        In January 1991, Project Manager James Gosling and his team members Patrick Naughton, Mike Sheridan, Chris Warth,
+        and Ed Frank met to discuss the project.
+
+        Gosling initially planned to use C and C++ for development. However, the problem with these languages was that
+        they were system-dependent. They were designed to be compiled for a specific target machine and could not run on
+        various processors used by electronic devices.
+
+        James Gosling and his team started developing a new language that was completely system-independent.
+        This language was initially called OAK. Since the name was already registered by another company, it was later
+        renamed Java.
+
+        While developing the language, the team consumed a lot of coffee. The coffee was supplied from a place called
+        Java Island, which inspired the language's name. The symbol of Java is a cup and saucer.
+
+        Sun Microsystems formally announced Java at the SunWorld Conference in 1995. On January 23, 1996,
+        the first Java Development Kit (JDK 1.0) was released.
+
+
 * Initially it is called as, OAK
 ---------------------------------
     1. Java was initially named Oak. Oak is a symbol of strength and is the national tree of many countries such as:
@@ -502,6 +526,39 @@ VII. Features Of Java
 ==========================
 Simple, Object Oriented, Platform Independent, Secured, Robust, Portable, Dynamic, Interpreted,
 High Performance, Multi-Threaded, Distributed, Architecture neutral
+    1. Simple:
+    Learning and practicing Java is easy because it resembles C and C++.
+
+    2. Object-Oriented Programming Language:
+    Unlike C++, Java is considered a pure object-oriented programming language.
+
+    3. Distributed:
+    Java is designed for network-based applications and provides extensive libraries that work with TCP/IP protocols.
+
+    4. Secure:
+    Java enables the development of virus-free and tamper-free systems, making it suitable for Internet applications.
+
+    5. Robust (Strong/Powerful):
+    Java programs are less likely to crash because of strong exception handling and memory management features.
+
+    6. Interpreted:
+    Java programs are compiled into bytecode. The JVM interpreter executes this bytecode, making Java
+    platform-independent.
+
+    7. Portable:
+    Java does not contain implementation-dependent features and produces the same results on different machines.
+
+    8. Architecture Neutral:
+    Java bytecode is machine-independent and can run on any processor and operating system that supports the JVM.
+
+    9. High Performance:
+    Java uses a JIT (Just-In-Time) Compiler, which improves execution speed.
+
+    10. Multithreaded:
+    Java supports executing multiple parts of a program simultaneously, which is essential for server-side applications.
+
+    11. Dynamic:
+    Java supports dynamically changing programs on the Internet, such as applets.
 ------------------------------------------------------------------------------------------------------------------------
 
 VIII. WHY JAVA IS PLATFORM - INDEPENDENT ?
@@ -513,7 +570,190 @@ Therefore, the same Java program can run on any system that has a compatible JVM
 This is known as 'Write Once, Run Anywhere' (WORA).
 
 ------------------------------------------------------------------------------------------------------------------------
-IX. INTERVIEW EXPECTED QUESTIONS
+
+
+IX. JAVA INSTALLATION AND ENVIRONMENT SET UP
+=============================================
+To install Java, first download the JDK from the official Java website. Run the installer and complete the installation.
+    Then configure the JAVA_HOME and PATH environment variables.
+    Finally, verify the installation using the java -version and javac -version commands.
+
+==> Download JDK from Oracle Downloads :
+    After downloading, by default JDK will be installed in:
+        C:\Program Files\Java\jdk1.5.0_05    (Here jdk1.5.0_05 is the JDK version.)
+==> Environment Set up :
+    Setting up Java Environment
+
+    After installing the JDK, we need to set at least one environment variable to compile and run Java programs.
+    (A PATH environment variable enables the operating system to find the JDK executables when the current working
+    directory is not the JDK’s binary directory.)
+==> Setting Environment Variables from Command Prompt :
+    If we set the variables from a command prompt, they will be valid only for that session.
+                set PATH=C:\Program Files\Java\jdk1.5.0_05\bin;%PATH%
+==> Setting Environment Variables as System Variables
+    If we set the variables as system variables, they will be available permanently.
+
+    Steps:
+    ==========
+        1. Right-click on My Computer.
+        2. Choose Properties.
+        3. Open the Advanced tab.
+        4. Click the Environment Variables button. (Or search for Edit environment variables in search bar)
+        5. In the System Variables section, select Path and click Edit.
+        6. A window displaying the variable name and value will appear.
+                Do not remove the existing path value. Append the following path at the end:
+                        C:\Program Files\Java\jdk1.5.0_05\bin
+                Finally, click OK.
+        7. Verification
+                Open Command Prompt and type:
+                        java -version
+                            or
+                        javac -version
+                If the installed Java version is displayed, the environment setup is successful.
+
+------------------------------------------------------------------------------------------------------------------------
+
+X. STRUCTURE OF JAVA PROGRAM :
+===============================
+    In Java, we first import the required packages. By default, the java.lang package is imported. Java has several
+    packages in its library. A package is a kind of directory that contains a group of related classes and interfaces.
+    A class or interface contains methods.
+
+    Since Java is an Object-Oriented Programming language, we cannot write a Java program without at least one class.
+    Therefore, it is mandatory to write a class in a Java program. We use the class keyword followed by the class name.
+
+    In Java, program execution starts from
+    the main() method. The return type of the main method is void because it returns nothing.
+
+    * Why is main() Static?
+    --------------------------
+      Since Java is an Object-Oriented Programming language, methods and members of a class are normally accessed
+      through objects. However, program execution starts from the main() method, and the JVM must call it before any
+      object is created.
+
+      Static methods can be called and executed without creating objects. Therefore, the main() method is declared
+      as static so that the JVM can invoke it directly without creating an object of the class.
+
+    * Explanation of main() Method?
+    -------------------------------
+      The JVM calls the main() method when a Java program starts executing. JVM (Java Virtual Machine) is developed by
+      the Java development team, while the main() method is written by the programmer.
+
+      Since the JVM must access the main() method, it should be declared as public. If it is not public,
+      the JVM cannot access and execute it.
+
+      The JVM always looks for a main() method with a String array parameter. Therefore, we must declare it as:
+                    public static void main(String args[])
+
+      A class body starts with { and ends with }. A class contains variables and methods. We can create any number of
+      variables and methods inside a class.
+
+      In our first program, we have written only one method, namely main().
+      The purpose of the sample program is to display the text "Hello World". In Java, the print() method is used to
+      display output on the monitor.
+
+      Normally, a method is called using:
+                  objectName.methodName();
+      To call the print() method, we would need an object of the PrintStream class.
+
+      Java provides an alternative through:
+                        System.out.print("Hello World");
+            Here:
+                    System is a class.
+                    out is a static variable (field) of the System class.
+                    out internally refers to a PrintStream object.
+                    Therefore, we can directly call:
+                        System.out.print("Hello World");
+
+      The println() method also belongs to the PrintStream class. After displaying the output, it moves the cursor to
+      the next line.
+      In the sample program, System and String are classes present in the java.lang package.
+
+------------------------------------------------------------------------------------------------------------------------
+
+XI. CREATING A SOURCE FILE IN JAVA
+====================================
+==> we have out-sources like vs code, eclipse, intelliJ to compile and run the applications
+==> Creating a Source File
+    Type the program in a text editor such as Notepad, WordPad, Microsoft Word, or EditPlus.
+
+    Open Notepad through:
+
+        Start → Notepad
+        Type the Java program (for example, the Sample Program).
+        Save the file with the same name as the class name.
+            Example:
+                Class Name : Sample
+                File Name  : Sample.java
+        In Notepad, select:
+            File → Save
+            Enter the filename with the .java extension and save it.
+        In the Save dialog box:
+            Using the Save in combo box, specify the folder (directory) where you want to save the file.
+            In the File name text field, type:
+                        "Sample.java"
+            Click Save and exit Notepad.
+        Compiling the Source File into a Class File
+            javac <clasName.java>
+        Run the file
+            java clasName
+
+------------------------------------------------------------------------------------------------------------------------
+
+XII. NAMING CONVENTIONS :
+==========================
+Naming Conventions :
+    Naming conventions specify the rules to be followed while writing names of packages, classes, methods, variables,
+    and constants.
+
+1. Package Names
+    Package names are written in lowercase letters.
+    Examples:
+        javaio
+        javalang
+        javaawt
+2. Class and Interface Names
+    Each word starts with a capital letter (Pascal Case).
+    Examples:
+        Sample
+        AddTwoNumbers
+        EmployeeDetails
+3. Method Names
+    Method names start with a small letter, and each subsequent word starts with a capital letter (camelCase).
+    Examples:
+        sum()
+        sumTwoNumbers()
+        minValue()
+4. Variable Names
+    Variable names follow the same rule as method names.
+    Examples:
+        sum
+        count
+        totalCount
+5. Constants
+    Constants should be written in all capital letters.
+    Examples:
+        PI
+        COUNT
+        MAX_VALUE
+6. Keywords (50)
+    Keywords are reserved words and are written in lowercase letters.
+    (48 actively used keywords + const + goto reserved keywords.
+    Examples:
+        abstract    assert      boolean     break       byte
+        case        catch       char        class       const
+        continue    default     do          double      else
+        enum        extends     final       finally     float
+        for         goto        if          implements  import
+        instanceof  int         interface   long        native
+        new         package     private     protected   public
+        return      short       static      strictfp    super
+        switch      synchronized this       throw       throws
+        transient   try         void        volatile    while
+
+------------------------------------------------------------------------------------------------------------------------
+
+INTERVIEW EXPECTED QUESTIONS
 ===============================
 JVM
 ----

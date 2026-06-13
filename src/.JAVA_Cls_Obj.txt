@@ -1,28 +1,30 @@
 I. CLASS
 =========
 A Class is a blueprint (or) template.
-        ==> A module or template that contains data and methods (functions).
+        ==> A module or template that contains data (attributes) and methods (functions).
+        ==> A class represents a person, place or thing.
         ==> An object is created from a class
         ==> No memory for fields until instantiation
         ==> logical entity
-Example :
-class Student {
-    int id;
-    String name;
+Structure :
+-----------
 
-    void display() {
-        System.out.println(name);
-    }
+<accessModifier> class <className>{
+    Properties(variables);
+    Actions(methods);
 }
 
 ------------------------------------------------------------------------------------------------------------------------
 
 II. OBJECT
 ============
-An Object is an instance of a class.
+An Object is an instance of a class (physically happening) / a real time entity
         ==> OOP follows the data hiding concept.
         ==> Data security is increased through encapsulation, inheritance, and polymorphism.
         ==> Physical entity
+        ==>physical copy of an object and assigning value done by using new operator to allocate memory dynamically.
+           this reference helps to store variables and methods of that class.'
+
 Example : Student s1 = new Student();
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -106,3 +108,39 @@ V. JAVA INSTALLATION
 
 ------------------------------------------------------------------------------------------------------------------------
 
+VI. COMMENTS IN JAVA
+======================
+Comments :
+    Comments are descriptions about the aim and features of a program. Comments increase the readability of a program.
+
+There are three types of comments in Java:
+1. Single Line Comments : These comments start with //
+Example: // this is comment line
+
+2. Multi Line Comments : These comments start with /* and end with */
+Example: / * this is comment line * /
+
+3. Java Documentation Comments : These comments start with /** and end with */
+   These comments are useful for creating an HTML file called API (Application Programming Interface) Document.
+   This file contains descriptions of all the features of software.
+
+------------------------------------------------------------------------------------------------------------------------
+
+VII. ESCAPE SEQUENCES IN JAVA
+=================================
+Java supports all escape sequences supported by C/C++.
+An escape sequence begins with a backslash (\) and has a special meaning to the compiler.
+------------------------------------------------------------------------
+| Escape Sequence | Description                                        |
+| --------------- | -------------------------------------------------- |
+| `\t`            | Insert a tab in the text at this point             |
+| `\b`            | Insert a backspace in the text at this point       |
+| `\n`            | Insert a new line in the text at this point        |
+| `\r`            | Insert a carriage return in the text at this point |
+| `\f`            | Insert a form feed in the text at this point       |
+| `\'`            | Insert a single quote character                    |
+| `\"`            | Insert a double quote character                    |
+| `\\`            | Insert a backslash character                       |
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
