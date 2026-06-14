@@ -1,14 +1,23 @@
 I. INHERITANCE / IS-A-RELATIONSHIP :
 ===================================
-Creating a new class from existing class such that the features of existing class are available to the new class.
+Inheritance is an object-oriented principle where a class acquires the properties and behaviours
+(fields and methods) of another class. Promotes code reuse, polymorphism, and hierarchical
+classification.
+
+Keyword used: extends (for classes), implements (for interfaces).
+
 Existing class - super class / parent class / base class
 New class - sub class/ child class / derived class
 --> Using inheritance, while creating sub classes a programmer can reuse the super class code without rewriting it.
 
 Syntax :
 ---------
-create <class1> extends <class2>{}
---> extends is the key word to extend the classes.
+class Parent {
+ // parent members
+}
+class Child extends Parent {
+ // child members
+}
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -141,3 +150,54 @@ V. Why Java does not support Multiple Inheritance through Classes?
 ------------------------------------------------------------------------------------------------------------------------
 VI. SUPER Key Word
 ======================
+• The super keyword in Java is used to refer to the immediate parent class of a subclass. It is
+mainly used in inheritance to access members (variables, methods, constructors) of the parent
+class.
+
+Usage of super keyword:
+---------------------------
+• super must be the first statement in the constructor if used to call the parent constructor.
+• It cannot be used in static methods.
+• Useful in resolving name conflicts between parent and child members.
+
+
+Example:
+class A {
+    int num = 100;
+
+    A() {
+        System.out.println("Parent constructor");
+    }
+
+    void display() {
+        System.out.println("Display method in class A");
+    }
+}
+
+class B extends A {
+    int num = 200;
+
+    B() {
+        super(); // Calls parent class constructor
+        System.out.println("Child constructor");
+    }
+
+    void show() {
+        System.out.println("Child num: " + num);
+        System.out.println("Parent num using super: " + super.num);
+        super.display(); // Calls parent method
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        B b = new B();
+        b.show();
+    }
+}
+public class TestSuper {
+ public static void main(String[] args) {
+ B obj = new B();
+ obj.show();
+ }
+}

@@ -101,6 +101,7 @@ III. Why Java came despite of C, C# ?
 ======================================
 C is not object oriented, it directly deals with the memory address in the system which is dangerous to be hacked,
 as a part C#, does not support garbage collector for better memory management in an efficient way.
+==> Garbage Collector in Java makes Memory Management efficient.(To avoid Memory location)
 
 Problem in C/C++	          Java Solution
 ------------------          -------------------
@@ -280,6 +281,17 @@ complex applications where data security, reusability, and maintainability are i
 
 VI. JAVA INTERNAL WORKING
 ===============================
+
+Java   javac    Byte   JVM          JRE     JRE          output
+Code  =======>  Code  ======>  0/1s ======> main() ====> Hello
+
+WORA - Write Once, Run anywhere
+
+.class --> windows  (OS)  platform independent
+       --> linux
+       --> macOS
+       --> andriod
+
 ==> JDK
     JDK (Java Development Kit) is a complete package required to develop, compile, and run Java applications.
     It includes the JRE, JVM, and development tools like the Java compiler (javac), debugger, and other utilities.

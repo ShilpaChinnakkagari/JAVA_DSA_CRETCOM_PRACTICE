@@ -20,6 +20,10 @@ The method to be executed is decided by the compiler during compilation.
  --> Changing Data types of parameters
  --> Changing order of parameters.
 
+   ** Method overloading is used to increase the readability of the program and to handle different
+    types of inputs with the same method name.
+
+
  * CTP achieved by Method Overloading (also known as early/static binding)
 
     Example :
@@ -58,6 +62,13 @@ because the compiler determines which overloaded method should be executed
     --> IS-A-RELATIONSHIP
     --> During Method Overriding, we can use optionally annotation "@Override" which determines the method is overridden
         for a specific method.
+    --> Cannot override static, private, or final methods because they are either class-level or cannot
+        be modified
+
+  * Main Purpose
+  --------------
+  The main purpose of method overriding is to allow a subclass to modify or extend the behaviour
+  of a method inherited from a superclass, enabling dynamic or runtime polymorphism.
 
   * RTP achieved by Method Overriding (also known as late/dynamic binding)
 
@@ -95,3 +106,19 @@ III. DIFFERENCE BETWEEN METHOD OVERLOADING & OVERRIDING
 | Compiler decides          | JVM decides           |
 -----------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------
+IV. If java does not support polymorphism, how can we achieve the concept of a method to behave differently
+for different objects?
+--> could be achieved using conditional statements such as if else, switch, instanceof
+--> This approach increases code complexity, reduces maintainability and requires modifying existing code
+    whenever a new object type is created.
+--> For instance, to execute different actions for Dog and Cat objects, the programmer would need to explicitly
+    check the object type and call the corresponding method.
+
+    Example:
+    if(obj instanceof Dog)
+        ((Dog)obj).sound();
+    else if (obj instanceof Cat)
+         ((Cat)obj).sound();
+
+    But in the case of polymorphism is preferred because it automatically invokes the appropriate method at run time
+    based on the actual object, making programs more flexible and extensible

@@ -1,0 +1,97 @@
+========================================================================================================================
+PART - A
+========================================================================================================================
+I. Arrays
+============
+An array in Java is a data structure that stores a fixed-size, sequential collection of elements of the
+same type. It can be thought of as a container holding multiple values of the same data type, organized
+in a contiguous block of memory. Each element in an array is accessed using its index, which starts
+from 0.
+
+Arrays can be
+-> Single or One dimensional
+-> Multi-dimensional.
+
+ ==> Declaration: dataType[] arrayName;
+    ==> Initialization: arrayName = new dataType[arraySize];
+    ==> Declaration and Initialization: dataType[] arrayName = new dataType[arraySize];
+    ==> Declaration, Initialization, and Assignment: dataType[] arrayName = {value1, value2, value3, ...};
+
+* Accessing Array Elements
+==========================
+To access individual elements in an array use index. Array indices are zero-based, meaning
+the first element is at index 0, the second at index 1, and so on
+
+* Array Length:
+===============
+You can find the number of elements in an array using the length property (note that it's a
+property, not a method, so you don't use parentheses):
+
+* Iterating Through Arrays:
+============================
+You'll often need to process all the elements in an array. The most common way to do this is
+using loops:
+
+    For loop: Provides explicit control over the index.
+    for(int i=0; i < array.length; i++){
+        //
+    }
+
+    Enhanced for loop (for-each loop): Provides a more concise way to iterate through the
+    elements without explicitly managing indices.
+    for(int x : array){
+        //
+     }
+
+     When to use what ?
+     ====================
+     We cannot estimate specific size of array, use enhanced for loop.
+
+
+------------------------------------------------------------------------------------------------------------------------
+II. TYPES OF ARRAYS
+===================
+1. Single Dimensional array
+------------------------------
+A single-dimensional array is a linear sequence of elements.
+
+2. Multi Dimensional array
+--------------------------
+a multi-dimensional array is an array of arrays, often used to represent tables or matrices.
+
+3. Two-dimensional (2D) arrays
+---------------------------------
+Two-dimensional (2D) arrays in Java are like tables or grids. Imagine a spreadsheet with rows
+and columns – that's essentially what a 2D array represents. It's an array of arrays, where each
+element of the outer array is itself an array.
+
+------------------------------------------------------------------------------------------------------------------------
+III. Key Characteristics of Java Arrays:
+=========================================
+     ==> Fixed Size: Arrays are fixed in size, once array is allocating with a certain size, cannot
+          change its size. To grow or shrink size of the array dynamically, consider using classes
+          from the Java Collections Framework like ArrayList.
+     ==> Homogeneous Data Type: All elements in an array must be of the same data type.
+     ==> Contiguous Memory Allocation: Array elements are stored in contiguous memory
+         locations. This allows for efficient access to any element using its index.
+     ==> Zero-Based Indexing: Remember that the first element is at index 0. This is a common
+         source of off-by-one errors for beginners.
+
+------------------------------------------------------------------------------------------------------------------------
+IV. METHODS IN ARRAYS CLASS
+============================
+-------------------------------------------------------------------------------------------------------------------------------------
+| Method           | Description                                               | Example                                            |
+| ---------------- | --------------------------------------------------------- | -------------------------------------------------- |
+| `sort()`         | Sorts the array in ascending order                        | `Arrays.sort(arr);`                                |
+| `binarySearch()` | Searches for an element using binary search               | `int index = Arrays.binarySearch(arr, 25);`        |
+| `equals()`       | Checks whether two arrays are equal                       | `Arrays.equals(arr1, arr2);`                       |
+| `fill()`         | Fills all elements of an array with a specified value     | `Arrays.fill(arr, 5);`                             |
+| `copyOf()`       | Copies an array to a new array of specified length        | `int[] newArr = Arrays.copyOf(arr, 5);`            |
+| `copyOfRange()`  | Copies a specified range of elements from an array        | `int[] part = Arrays.copyOfRange(arr, 1, 4);`      |
+| `toString()`     | Returns a string representation of the array              | `System.out.println(Arrays.toString(arr));`        |
+| `asList()`       | Converts an array into a fixed-size List                  | `List<String> list = Arrays.asList("A", "B");`     |
+| `setAll()`       | Sets each array element using a generator (lambda)        | `Arrays.setAll(arr, i -> i * 2);`                  |
+| `stream()`       | Converts an array into a Stream for functional operations | `Arrays.stream(arr).forEach(System.out::println);` |
+-------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------

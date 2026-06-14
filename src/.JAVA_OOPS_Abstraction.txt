@@ -181,6 +181,10 @@ VIII. INTERFACE :
     ==> Class has to provide the implementation for abstract methods defined in the interface by being implemented
         by the interface.
     ==> To build IS-A-REALTIONSHIP between interface and class, use 'implement' keyword.
+    ==> Interfaces are used to achieve
+        abstraction and multiple inheritance in Java.
+    ==> From Java 8, interfaces can have default methods with a body, using the default keyword and
+        also interfaces can have static methods with a body.
     ==> syntax : interface <interfaceName>{
                     // abstract methods
                   }

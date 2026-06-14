@@ -27,6 +27,20 @@ An Object is an instance of a class (physically happening) / a real time entity
 
 Example : Student s1 = new Student();
 
+
+** Assigning Object Reference Variables
+-----------------------------------------
+• Assigning one object reference variable to another object reference variable, will not
+create a copy of the object, only its make a copy of the reference.
+        For example,
+            Box b1 = new Box();
+            Box b2 = b1;
+
+        The assignment of b1 to b2 did not allocate any memory or copy any part of the original
+        object. It simply makes b2 refer to the same object as does b1. Thus, any changes made to
+        the object through b2 will affect the object to which b1 is referring, since they are the same
+        object
+
 ------------------------------------------------------------------------------------------------------------------------
 
 III. HOW TO RUN JAVA PROGRAM

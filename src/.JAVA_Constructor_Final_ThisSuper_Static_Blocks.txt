@@ -1,0 +1,780 @@
+========================================================================================================================
+PART - A
+========================================================================================================================
+
+I. CONSTRUCTORS
+===================
+==>  A constructor in Java is a special method that is used to initialize objects. It is called
+    automatically when an object of a class is created using the new keyword. Constructors have
+    the same name as the class and do not have a return type, not even void.
+==> If no constructor is defined, Java provides a default constructor (with no parameters).
+
+Syntax of a Constructor:
+-------------------------
+class ClassName {
+ // Constructor
+ ClassName(parameter_list) {
+ // Initialization code
+ }
+}
+
+        Why Constructor?
+            Constructor is used to initialize objects when they are created.
+
+        Can Constructor be Overridden?
+            No, constructors are not inherited, so they cannot be overridden.
+
+        Can Constructor be Overloaded?
+            Yes, constructors can be overloaded by changing parameter lists.
+
+** Can Constructor be static/final/abstract?
+
+   Can constructor be static?
+   ❌ No
+
+   Can constructor be final?
+   ❌ No
+
+   Can constructor be abstract?
+   ❌ No
+
+    Why? // doubt
+    ---------->
+    Static → Constructors work on objects, static belongs to class.
+    Final → Constructors are not inherited.
+    Abstract → Constructors cannot be overridden
+
+   Can we create an object without a constructor?
+   No. Whenever an object is created, some constructor must execute.
+
+   Can a constructor be private?
+   Yes. A private constructor prevents object creation from outside the class. Used in Singleton Design Pattern.
+
+   Constructor can be inherited? No.
+   --> They are used for object creation only not like normal methods
+   --> Inheriting them would break the encapsulation by exposing parent initialization logic.
+   --> Java uses super() to call the parent constructor instead of inheriting it.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+II. TYPES OF CONSTRUCTORS
+===========================
+1. Default Constructor
+   --> Provided by Java if no constructor is written.
+
+2. No-Argument Constructor
+   --> Constructor written by programmer with no parameters.
+
+3. Parameterized Constructor
+   --> Constructor with parameters.
+
+------------------------------------------------------------------------------------------------------------------------
+
+III. CONSTRUCTOR OVERLOADING
+============================
+Java supports constructor overloading, where a class can have multiple constructors with
+different parameter lists. This allows objects to be initialized in different ways
+
+
+** Key Points about Constructor Overloading:
+➢ Each constructor must have a unique parameter list (different number or types of
+parameters).
+➢ Overloaded constructors provide flexibility in object initialization.
+➢ We can call one constructor from another using this() (constructor chaining).
+
+
+Example :
+    class Student {
+        private String name;
+        private int age;
+        private double gpa;
+
+        // Constructor 1: No arguments
+        public Student() {
+            this.name = "Unknown";
+            this.age = 0;
+            this.gpa = 0.0;
+        }
+
+        // Constructor 2: Name and Age
+        public Student(String name, int age) {
+            this.name = name;
+            this.age = age;
+            this.gpa = 0.0;
+        }
+
+        // Constructor 3: Name, Age and GPA
+        public Student(String name, int age, double gpa) {
+            this.name = name;
+            this.age = age;
+            this.gpa = gpa;
+        }
+
+        public void display() {
+            System.out.println("Name: " + name);
+            System.out.println("Age: " + age);
+            System.out.println("GPA: " + gpa);
+        }
+
+        public static void main(String[] args) {
+
+            Student student1 = new Student();
+            Student student2 = new Student("Alice", 20);
+            Student student3 = new Student("Bob", 22, 3.8);
+
+            student1.display();
+            student2.display();
+            student3.display();
+        }
+    }
+
+------------------------------------------------------------------------------------------------------------------------
+
+IV. DIFFERENCE BETWEEN CONSTRUCTOR AND METHOD
+================================================
+| Constructor          | Method                  |
+| -------------------- | ----------------------- |
+| Initializes object   | Performs operation      |
+| Same name as class   | Any valid name          |
+| No return type       | Has return type or void |
+| Called automatically | Called explicitly       |
+--------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+PART - B
+========================================================================================================================
+
+I. FINAL Keyword:
+================
+• In Java, the final keyword is used to restrict certain behaviours for variables, methods, and
+classes.
+It can be applied to variables, methods, and classes, and its meaning changes slightly depending on the context.
+
+
+• Final Variable: A final variable is a variable whose value cannot be changed once it is
+initialized. It is essentially a constant. Must be initialized in the constructor or at the time of
+declaration.
+• Final Method: A final method cannot be overridden by subclasses. It ensures that the
+method's behaviour remains consistent across all subclasses.
+• Final Class: A final class cannot be sub-classed (i.e., it cannot be extended by another class).
+This is useful for creating immutable classes or preventing inheritance.
+• Example for final keyword
+
+Example :
+final class FinalClass {
+
+    final int CONSTANT_VALUE = 100;
+
+    final void displayMessage() {
+        System.out.println("final method inside a final class.");
+    }
+}
+
+/* Attempting to extend FinalClass will result in a compile-time error */
+// class SubClass extends FinalClass { }
+
+public class FinalKeywordExample {
+
+    public static void main(String[] args) {
+
+        FinalClass obj = new FinalClass();
+
+        System.out.println("Final variable value: " + obj.CONSTANT_VALUE);
+
+        // obj.CONSTANT_VALUE = 200; // Compile-time Error
+
+        obj.displayMessage();
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+PART - C
+========================================================================================================================
+
+I. THIS Key Word
+================
+this keyword:
+• In Java, this keyword is a reference to the current object within an instance method or
+constructor. It is primarily used to:
+➢ Differentiating Instance Variables: Using this.variable to
+refer to instance variables.
+➢ Returning the Current Object: Using return this to enable
+method chaining.
+➢ Passing the Current Object: Using this to pass the current
+object as an argument
+
+    Example :
+    class Person {
+        private String name;
+        private int age;
+
+        // Constructor using 'this' to differentiate instance variables
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Method to display person details
+        public void display() {
+            System.out.println("Name: " + this.name);
+            System.out.println("Age: " + this.age);
+        }
+    }
+
+    public class ThisKeywordExample {
+        public static void main(String[] args) {
+
+            // Creating a Person object
+            Person person = new Person("John", 25);
+                                 // Displaying person details
+            person.display();
+    }
+
+    Op : Name : John
+         Age :   25
+------------------------------------------------------------------------------------------------------------------------
+II. SUPER Key Word
+    ======================
+    • The super keyword in Java is used to refer to the immediate parent class of a subclass. It is
+    mainly used in inheritance to access members (variables, methods, constructors) of the parent
+    class.
+
+    Usage of super keyword:
+    ---------------------------
+    • super must be the first statement in the constructor if used to call the parent constructor.
+    • It cannot be used in static methods.
+    • Useful in resolving name conflicts between parent and child members.
+
+
+    Example:
+    class A {
+        int num = 100;
+
+        A() {
+            System.out.println("Parent constructor");
+        }
+
+        void display() {
+            System.out.println("Display method in class A");
+        }
+    }
+
+    class B extends A {
+        int num = 200;
+
+        B() {
+            super(); // Calls parent class constructor
+            System.out.println("Child constructor");
+        }
+
+        void show() {
+            System.out.println("Child num: " + num);
+            System.out.println("Parent num using super: " + super.num);
+            super.display(); // Calls parent method
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            B b = new B();
+            b.show();
+        }
+    }
+    public class TestSuper {
+     public static void main(String[] args) {
+     B obj = new B();
+     obj.show();
+     }
+    }
+
+------------------------------------------------------------------------------------------------------------------------
+
+IV. DIFFERENCE BETWEEN THIS AND SUPER KEYWORD
+===============================================
+---------------------------------------------------------------
+| this                            | super                      |
+| ------------------------------- | -------------------------- |
+| Refers current class object     | Refers parent class object |
+| Access current members          | Access parent members      |
+| Calls current class constructor | Calls parent constructor   |
+---------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+III. CONSTRUCTOR CHAINING
+=========================
+Constructor Chaining is the process of calling one constructor from another constructor within the same class or
+from the parent class constructor. It helps avoid code duplication and promotes code reusability
+
+Example :
+(1) Within Same Class (this())
+class Student {
+
+    Student() {
+        this(101);
+        System.out.println("Default Constructor");
+    }
+
+    Student(int id) {
+        System.out.println("Parameterized Constructor");
+    }
+}
+(2) Parent Class Constructor (super())
+class Vehicle {
+
+    Vehicle() {
+        System.out.println("Vehicle Constructor");
+    }
+}
+
+class Car extends Vehicle {
+
+    Car() {
+        super();
+        System.out.println("Car Constructor");
+    }
+}
+
+KEY RULES TO REMEMBER
+==========================
+1. this() calls another constructor in the same class.
+2. super() calls the parent class constructor.
+3. this() or super() must be the first statement inside a constructor.
+4. We cannot use both this() and super() in the same constructor.
+
+    * Why is main() Static?
+    --------------------------
+      Since Java is an Object-Oriented Programming language, methods and members of a class are normally accessed
+      through objects. However, program execution starts from the main() method, and the JVM must call it before any
+      object is created.
+
+      Static methods can be called and executed without creating objects. Therefore, the main() method is declared
+      as static so that the JVM can invoke it directly without creating an object of the class.
+
+
+** Can we use this in a static method?
+No, because this refers to the current object and static methods belong to the class, not an object.
+
+** What happens if we don't write super()?
+Java automatically inserts super() as the first statement of the child constructor.
+
+** Can we use super in static methods?
+No. super works with objects and inheritance, whereas static methods belong to the class
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+PART - D
+========================================================================================================================
+
+STATIC Key Word
+===============
+static keyword:
+• The static keyword in Java is used to create class-level members (variables, methods, blocks,
+and nested classes) that belong to the class itself rather than to any specific instance of the class.
+• static Variables Shared across all instances of the class. Accessed using the class name (e.g.,
+ClassName.variableName).
+• static Methods belong to the class, not to any instance. Can only access static variables or
+call other static methods. Accessed using the class name (e.g., ClassName.methodName()).
+• static Block used to initialize static variables. Executed when the class is loaded into
+memory.
+
+Example :
+    class Example {
+
+        // Static variable
+        static int staticVar;
+
+        // Static block
+        static {
+            System.out.println("Static block executed.");
+            staticVar = 10;
+        }
+
+        // Static method
+        public static void displayStaticVar() {
+            System.out.println("Static Variable: " + staticVar);
+        }
+
+        // Instance method
+        public void display() {
+            System.out.println("Instance method: Static Variable = " + staticVar);
+        }
+    }
+
+    public class StaticExample {
+        public static void main(String[] args) {
+
+            // Accessing static variable and method using class name
+            System.out.println("Accessing static variable: " + Example.staticVar);
+            Example.displayStaticVar();
+
+            // Creating object
+            Example obj = new Example();
+            obj.display();
+        }
+    }
+
+    Op :
+    Static block executed.
+    Accessing static variable: 10
+    Static Variable: 10
+    Instance method: Static Variable = 10
+
+** Why are static variables shared?
+Because static variables belong to the class, and only one copy is created irrespective of the number of objects.
+
+** Can static methods access non-static variables?
+No. Static methods can directly access only static members.
+
+** Can we override static methods?
+No. Static methods are hidden, not overridden.
+
+** Can we overload static methods?
+Yes.
+
+
+ORDER OF EXECUTION
+===================
+1. Static Block
+2. Instance Block
+3. Constructor
+4. Method
+
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+PART - E
+========================================================================================================================
+** BLOCK
+=========
+a piece of code or some set of instructions written inside the curly braces({...})
+--> In java, block dont have any name. Hence, it cannot be invoked or called.
+--> Block are mean to be automatically executed by the JVM.
+--> JVM prefers the block to execute compared to the constructor.
+Ex :
+class A{
+    {
+        S.o.p("Hello");
+    }
+    public A(int x){
+        S.o.p(x*x);
+    }
+    psvm{
+        A a = new A(10);
+    }
+}
+
+TYPES OF BLOCKS IN JAVA
+=========================
+1. Static Block in Java :
+----------------------------
+--> A static block in Java is used to initialize static data or execute logic when the class is loaded.
+--> It runs only once, even before the main() method is executed. This block is defined using the static keyword and
+    is executed automatically by the JVM when the class is first referenced.
+--> It's commonly used for loading configurations, setting up static resources, or registering components. You can have
+    multiple static blocks in a class, and they execute in the order they appear in the code.
+
+Example:
+public class StaticBlockExample {
+    static {
+        System.out.println("Static block executed.");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method executed.");
+    }
+}
+
+
+Output:
+Static block executed.
+Main method executed.
+
+    Use Cases:
+    -----------
+    1. Load configuration files
+    2. Initialize static variables
+    3. Establish database connections
+    4. Register drivers or libraries
+
+2. Instance Initialization Block (IIB) in Java
+===============================================
+--> An Instance Initialization Block (IIB) is used to initialize instance variables or perform setup actions before
+    any constructor is executed. It runs every time an object is created, and it runs before the constructor.
+--> If multiple constructors share common code, placing it inside an IIB helps avoid duplication. Unlike static blocks,
+    IIBs are non-static and defined without any keyword — just {} directly inside the class.
+
+Example:
+public class IIBExample {
+    {
+        System.out.println("Instance block executed.");
+    }
+
+    IIBExample() {
+        System.out.println("Constructor executed.");
+    }
+
+    public static void main(String[] args) {
+        IIBExample obj1 = new IIBExample();
+        IIBExample obj2 = new IIBExample();
+    }
+}
+
+Output:
+Instance block executed.
+Constructor executed.
+Instance block executed.
+Constructor executed.
+
+    Use Cases:
+    ------------
+    1. Shared code across multiple constructors
+    2. Logging object creation
+    3. Runtime validation or setup before object construction
+
+3. Constructor Block in Java
+=============================
+--> Constructor blocks are the bodies of constructors that initialize instance variables or perform setup tasks when
+    an object is created.
+--> Though not a distinct block type like static or IIB, the constructor body is treated as a
+    block enclosed in {}.
+--> You can have multiple constructors with different logic. Constructor blocks execute after the instance block
+    and are essential for object construction.
+
+Example:
+public class ConstructorBlockExample {
+    ConstructorBlockExample() {
+        System.out.println("Constructor without arguments.");
+    }
+
+    ConstructorBlockExample(String msg) {
+        System.out.println("Constructor with message: " + msg);
+    }
+
+    public static void main(String[] args) {
+        ConstructorBlockExample obj1 = new ConstructorBlockExample();
+        ConstructorBlockExample obj2 = new ConstructorBlockExample("Hello");
+    }
+}
+
+Output:
+Constructor without arguments.
+Constructor with message: Hello
+
+    Use Cases:
+    ----------
+    1. Initializing objects with default or passed values
+    2 Setting up dependencies
+    3. Constructor overloading
+
+4. Method Block in Java
+=========================
+--> A method block is the body of a method enclosed within {}. It contains the logic that is executed when the
+    method is called.
+--> It can contain variables, control statements, loops, and calls to other methods. Method blocks are essential for
+    structuring business logic and reusing code.
+--> Unlike IIBs and static blocks, method blocks only execute when the method is explicitly called.
+
+Example:
+public class MethodBlockExample {
+    void greet() {
+        System.out.println("Hello from method block.");
+    }
+
+    public static void main(String[] args) {
+        MethodBlockExample obj = new MethodBlockExample();
+        obj.greet();
+    }
+}
+
+Output:
+Hello from method block.
+
+    Use Cases:
+    ------------
+    1. Define reusable business logic
+    2. Organize large code into functions
+    3. Encapsulate task-specific behavior
+
+5. Loop and Conditional Blocks in Java
+===========================================
+--> Loop blocks (for, while, do-while) and conditional blocks (if, else, switch) use {} to group statements that execute
+    under certain conditions or repeatedly. These blocks allow for structured and readable control flow in a Java program. Variables declared inside these blocks are limited to the block’s scope, enhancing memory efficiency.
+
+Example:
+public class LoopConditionalExample {
+    public static void main(String[] args) {
+        int num = 5;
+
+        if (num > 0) {
+            System.out.println("Positive number.");
+        }
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Iteration: " + i);
+        }
+    }
+}
+
+Output:
+Positive number.
+Iteration: 0
+Iteration: 1
+Iteration: 2
+
+    Use Cases:
+    ----------
+    1. Decision-making logic
+    2. Iterating over arrays or collections
+    3. Validating user input
+
+6. Synchronized Block in Java
+==============================
+--> A synchronized block in Java is used in multithreaded programming to restrict access to a block of code so that
+    only one thread at a time can execute it. This ensures thread safety when multiple threads try to access shared resources.
+--> The block is defined using the synchronized keyword with a reference to the object that acts as the lock.
+
+Example:
+public class SynchronizedBlockExample {
+    void printNumbers() {
+        synchronized (this) {
+            for (int i = 1; i <= 3; i++) {
+                System.out.println(Thread.currentThread().getName() + " - " + i);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SynchronizedBlockExample obj = new SynchronizedBlockExample();
+
+        Runnable task = () -> obj.printNumbers();
+
+        Thread t1 = new Thread(task, "Thread-1");
+        Thread t2 = new Thread(task, "Thread-2");
+
+        t1.start();
+        t2.start();
+    }
+}
+
+Output:
+Thread-1 - 1
+Thread-1 - 2
+Thread-1 - 3
+Thread-2 - 1
+Thread-2 - 2
+Thread-2 - 3
+
+    Use Cases:
+    ------------
+    1. Prevent race conditions
+    2. Manage access to critical sections
+    3. Synchronize shared resources
+
+** Execution Flow of Blocks in Java
+===================================
+The different types of blocks in Java are executed in a specific order during the lifecycle of a class and its objects.
+Understanding this flow helps clarify how the JVM initializes classes and objects, and when each block gets triggered.
+
+When a Java program is executed, the block execution order is as follows:
+1. Static Block
+→ Executes once when the class is loaded into memory (before main() method).
+
+2. Instance Initialization Block (IIB)
+→ Executes every time an object is created, before the constructor.
+
+3. Constructor Block
+→ Executes after the IIB during object creation.
+
+4. Method Block
+→ Executes only when explicitly called after object creation.
+
+** Block Scope in Java
+========================
+--> The block scope means the visibility and lifetime of variables declared within a block (i.e., code enclosed in {}).
+--> A variable defined inside a block is only accessible within that block and is destroyed once the block finishes executing.
+--> This rule applies to all types of blocks: method blocks, loops, conditionals, static blocks, and instance blocks.
+--> Using proper block scope enhances code readability, avoids naming conflicts, and ensures that variables don’t consume
+    memory longer than needed. It also prevents accidental modification of variables outside their intended context.
+
+Example:
+public class BlockScopeExample {
+    public static void main(String[] args) {
+
+        if (true) {
+            int x = 10;
+            System.out.println("Inside if-block: x = " + x);
+        }
+        // System.out.println(x); // Error: x cannot be resolved
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Inside loop: i = " + i);
+        }
+        // System.out.println(i); // Error: i cannot be resolved
+    }
+}
+
+Output:
+Inside if-block: x = 10
+Inside loop: i = 0
+Inside loop: i = 1
+Inside loop: i = 2
+
+7. Nested Blocks in Java
+===========================
+--> Nested blocks in Java are the blocks defined inside other blocks using curly braces {}.
+    This allows developers to create localized scopes within larger ones. Variables declared in the inner block can
+    access those from the outer block, but not vice versa.
+--> Nested blocks are useful for logically grouping related code, especially in conditions, loops, exception handling,
+    and even method or class structures.
+--> Nested blocks help in managing variable scope, improving code readability, and isolating logic to avoid accidental
+    modifications of shared variables. However, excessive nesting can reduce clarity, so it should be used thoughtfully.
+
+Example:
+public class NestedBlockExample {
+    public static void main(String[] args) {
+        int outer = 10;
+
+        {
+            int middle = 20;
+            System.out.println("Outer: " + outer);
+            System.out.println("Middle: " + middle);
+
+            {
+                int inner = 30;
+                System.out.println("Inner: " + inner);
+                System.out.println("Access Middle: " + middle);
+                System.out.println("Access Outer: " + outer);
+            }
+            // System.out.println(inner); // Error: Cannot access inner block variable here
+        }
+
+        // System.out.println(middle); // Error: Cannot access middle block variable here
+    }
+}
+------------------------------------------------------------------------------------------------------------------------
+1. exception handling
+2. collection frmaeworkArrayList
+                       LinkedList
+                       HashSet
+                       HashMap
+ 3. multi threading
+ Thread
+ Runnable
+ Thread Lifecycle
+ 4. Object Class Methods
+    toString()
+    equals()
+    hashCode()
+    clone()
+
+
+
+ 5. wrapper classes
+ 6. strings
+ 7. object classes

@@ -17,8 +17,11 @@ Analogy :
 ------------------------------------------------------------------------------------------------------------------------
 II. ACCESS MODIFIERS IN JAVA
 =============================
-Access modifiers are keywords used to control the visibility and accessibility of classes, methods, variables, and
-constructors. Java provides four access modifiers: private, default, protected, and public
+Java provides four access modifiers: private, default, protected, and public
+
+==> In Java, access control is used to restrict access to class members (fields, methods, constructors, classes)
+    based on their access modifiers. This ensures encapsulation, a key principle of object-oriented
+    programming, where the internal state of an object is protected from unauthorized access.
 
 There are 4 access modifiers:
     ----------------------------------------------------------------------------------------------
@@ -35,6 +38,28 @@ There are 4 access modifiers:
 
     Which access modifier is least restrictive?
     ✅ public
+
+    1. public: Accessible from anywhere (other classes, packages, etc.).
+            public int age;
+    2. private: Accessible only within the same class.
+            private String name;
+    3. protected: Accessible within the same package and by subclasses (even if they are in
+    different packages).
+            protected double salary;
+    4. default (no modifier) : Accessible only within the same package.
+            int count
+
+    ** How to get private fields in another class
+    ===============================================
+    Using Getters and Setters methods
+
+    • Why Use Private Members with Getters and Setters?
+    ➢ Encapsulation: Protects the internal state of an object.
+    ➢ Validation: Allows you to add validation logic in setter methods.
+    ➢ Read-Only or Write-Only Access: You can provide only a getter (read-only) or only
+    a setter (write-only).
+    ➢ Flexibility :  You can change the internal implementation without affecting other
+                    classes.
 
 ------------------------------------------------------------------------------------------------------------------------
 
