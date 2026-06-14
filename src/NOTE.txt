@@ -1,0 +1,186 @@
+DSA Concepts You Must Know
+1. Arrays
+Array Basics
+Traversal
+Insert/Delete
+Linear Search
+Binary Search
+Sorting
+Two Pointers
+Sliding Window
+Prefix Sum
+Matrix Basics
+
+2. Strings
+String Methods
+StringBuilder
+Reverse String
+Palindrome
+Anagram
+Frequency Count
+Duplicate Characters
+Longest Common Prefix
+String Rotation
+
+3. Recursion
+Base Case
+Recursive Calls
+Factorial
+Fibonacci
+Sum of Digits
+String Reversal
+Recursive Array Traversal
+
+4. Sorting
+
+Know implementation and complexity of:
+
+Bubble Sort
+Selection Sort
+Insertion Sort
+Merge Sort (concept)
+Quick Sort (concept)
+Arrays.sort()
+
+5. Searching
+Linear Search
+Binary Search
+First Occurrence
+Last Occurrence
+
+6. Linked List
+
+Concepts:
+
+Node
+Head
+Next
+
+Problems:
+
+Traversal
+Insertion
+Deletion
+Search
+Reverse Linked List
+Find Middle Node
+
+7. Stack
+
+Concepts:
+
+LIFO
+push()
+pop()
+peek()
+
+Problems:
+
+Balanced Parentheses
+Reverse String
+Next Greater Element
+
+8. Queue
+
+Concepts:
+
+FIFO
+enqueue()
+dequeue()
+
+Types:
+
+Simple Queue
+Circular Queue
+Priority Queue
+
+9. Hashing
+
+Concepts:
+
+HashMap
+HashSet
+
+Problems:
+
+Frequency Count
+Duplicate Detection
+Two Sum
+First Non-Repeating Character
+
+10. Trees
+
+Know:
+
+Root
+Parent
+Child
+Leaf Node
+Height
+Depth
+
+Binary Tree:
+
+Preorder
+Inorder
+Postorder
+
+BST:
+
+Search
+Insert
+
+11. Heap (Basic)
+
+Know:
+
+Min Heap
+Max Heap
+Priority Queue Concept
+
+12. Graph (Basic)
+
+Concepts:
+
+Vertex
+Edge
+Directed Graph
+Undirected Graph
+
+Algorithms:
+
+BFS
+DFS
+
+13. Greedy (Basic)
+
+Problems:
+
+Activity Selection
+Coin Change (Greedy Version)
+14. Dynamic Programming (Basic)
+
+Know:
+
+Memoization
+Tabulation
+
+Problems:
+
+Fibonacci
+Climbing Stairs
+Kadane's Algorithm
+Most Important Patterns
+Array Pattern
+Two Pointers
+Sliding Window
+Prefix Sum
+String Pattern
+Palindrome
+Frequency Count
+HashMap
+Linked List Pattern
+Slow/Fast Pointer
+Tree Pattern
+DFS
+BFS
