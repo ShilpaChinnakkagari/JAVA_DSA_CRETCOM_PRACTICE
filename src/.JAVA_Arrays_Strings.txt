@@ -95,3 +95,23 @@ IV. METHODS IN ARRAYS CLASS
 | `stream()`       | Converts an array into a Stream for functional operations | `Arrays.stream(arr).forEach(System.out::println);` |
 -------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------
+========================================================================================================================
+PART - B
+========================================================================================================================
+// PDF - .JAVA_Strings_MultiThreading
+
+Difference between Strings/StringBuffer/StringBuilder
+
+String is immutable, whereas StringBuffer and StringBuilder are mutable. StringBuffer is thread-safe (synchronized),
+while StringBuilder is not thread-safe and therefore faster
+
+-----------------------------------------------------------------------------------------------------------
+| Feature         | String                     | StringBuffer               | StringBuilder               |
+| --------------- | -------------------------- | -------------------------- | --------------------------- |
+| Mutability      | Immutable (cannot change)  | Mutable (can change)       | Mutable (can change)        |
+| Thread Safe     | Yes (immutable)            | Yes (synchronized)         | No                          |
+| Performance     | Slow for modifications     | Faster than String         | Fastest                     |
+| Memory Usage    | More (creates new objects) | Less                       | Less                        |
+| Synchronization | Not required               | Synchronized               | Not synchronized            |
+| Use Case        | Read-only text             | Multi-threaded environment | Single-threaded environment |
+-----------------------------------------------------------------------------------------------------------
