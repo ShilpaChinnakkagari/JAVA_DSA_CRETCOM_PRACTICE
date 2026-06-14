@@ -758,24 +758,4 @@ public class NestedBlockExample {
     }
 }
 ------------------------------------------------------------------------------------------------------------------------
-1. exception handling
-2. collection frmaework
-                        ArrayList
-                       LinkedList
-                       HashSet
-                       HashMap
- 3. multi threading
- Thread
- Runnable
- Thread Lifecycle
- 4. Object Class Methods
-    toString()
-    equals()
-    hashCode()
-    clone()
 
-
-
- 5. wrapper classes
- 6. strings
- 7. object classes
