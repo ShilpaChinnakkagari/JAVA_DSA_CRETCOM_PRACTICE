@@ -22,7 +22,7 @@ I. String Fundamentals
    - replaceAll()
    - trim()
    - split()
-   - toUpperCase()S
+   - toUpperCase()
    - toLowerCase()
  isEmpty()
  isBlank() (Java 11+)
