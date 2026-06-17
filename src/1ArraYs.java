@@ -83,7 +83,7 @@
 // 28. Count frequency of each element. //ArraYs_CountFreq
 // 29. Find duplicate elements in the array. //ArraYs_Duplicates
 // 30. Remove duplicates from sorted array (in-place).//ArraYs_RemoveDuplicates
-// 31. Find the first repeating element.
+// 31. Find the first repeating element. //ArraYs_FirstRepeating
 // 32. Find the first non-repeating element.
 
 // ===============================

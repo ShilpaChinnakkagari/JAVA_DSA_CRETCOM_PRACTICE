@@ -88,6 +88,7 @@ i.e.,it is going to return the data of object what we are storing. That is the r
  maintaining the general contract for the hashCode() method.
 
 Example :
+-----------
  public class Example {
      public static void main(String[] args) {
          Example example = new Example();
@@ -167,9 +168,9 @@ Example :
  wrong : ArrayList<int> list = new ArrayList<>();
  crt  : ArrayList<Integer> list = new ArrayList<>();
 
- -----------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
  Interview Questions
-
+=====================
  Q. What is Autoboxing?
  Automatic conversion of a primitive data type into its corresponding wrapper class object.
 
