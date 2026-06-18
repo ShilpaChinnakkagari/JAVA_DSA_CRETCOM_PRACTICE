@@ -90,11 +90,11 @@
 // F. Two Pointer & Rearrangement
 // ===============================
 
-// 33. Move all zeros to the end.
+// 33. Move all zeros to the end. // ArraYs_MoveZeroesEnd
 // 34. Move all negative numbers to one side.
-// 35. Rearrange positive and negative numbers alternatively.
+// 35. Rearrange positive and negative numbers alternatively. //ArraYs_PosNegAlternative
 // 36. Check if array is palindrome.
-// 37. Swap alternate elements.
+// 37. Swap alternate elements. //ArraYs_SwapElementsAlternate
 // 38. Reverse elements in groups of k.
 
 // ===============================
