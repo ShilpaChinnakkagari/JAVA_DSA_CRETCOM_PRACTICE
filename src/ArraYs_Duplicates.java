@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.*;
 public class ArraYs_Duplicates {
     static ArrayList<Integer> duplicates(int[] arr){

@@ -2,7 +2,7 @@
 // A. Integer Basics
 // ===============================
 
-// 1. Check whether a number is even or odd. //Integers_EvenOdd
+// 1. Check whether a number is even or odd. //IntegeRs_EvenOdd
 // 2. Check whether a number is positive, negative, or zero. //Integers_PosNegZero
 // 3. Find the largest of two numbers. //Integers_LargestTwo
 // 4. Find the largest of three numbers. //Integers_LargestThree
